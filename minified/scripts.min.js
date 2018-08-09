@@ -1,0 +1,2 @@
+$(function(){$(".bars").on("click",function(a){var s=$(".navigation").data("nav");a.stopPropagation(),"close"==s?($(".navigation").addClass("nav-open").data("nav","open"),$(".bars>i").first().removeClass("fas fa-bars").addClass("fas fa-times")):($(".navigation").removeClass("nav-open").data("nav","close"),$(".bars>i").removeClass("fas fa-times").addClass("fas fa-bars"))})});
+//# sourceMappingURL=scripts.js.map
