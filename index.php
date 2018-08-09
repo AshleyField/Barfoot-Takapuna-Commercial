@@ -18,7 +18,7 @@
 
 			<div class="property-area">
 				<div class="property-area-heading">
-					<span>Featured Listing</span>
+					<span>Featured Property</span>
 				</div>
 				<div class="property-area-image">
 					<img src="<?php echo get_theme_file_uri('/assets/images/property-1.jpg')?>" alt="">
