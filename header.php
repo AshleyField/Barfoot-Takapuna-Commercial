@@ -31,25 +31,48 @@
 				<div class="bars">
 					<i class="fas fa-bars"></i>
 				</div>
-			<!-- 	<ul class="navigation mobile-nav" data-nav="close">
+				<ul class="navigation mobile-nav" data-nav="close">
 					<li><a href="index.html" class="active">Home</a></li>
 					<li><a href="rent-a-vehicle.php">About</a></li>
 					<li><a href="why-nz.html">Current Listings</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul> -->
+					<li class="dropdown">
+						<p class="dropbtn">About</a>
+						<i class="fas fa-sort-down dropbtn" id="mobile-sub-menu"></i>
 
-				<?php wp_nav_menu(array(
-					'theme_location' => 'barfootNavigation',
-					'menu_class' => 'navigation mobile-nav'
-				)); ?>
+						<div class="dropdown-content dropdown-content-closed">
+
+							<a href="index.html" class="sub-menu-item first-menu-item">Meet The Team</a>
+							<a href="index.html" class="sub-menu-item">Testimonials</a>
+							<a href="#" class="sub-menu-item">Track Record</a>
+
+						</div>
+					</li>
+
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+					
 
 				<ul class="navigation desktop-nav" data-nav="close">
 					<li><a href="index.html" class="active">Home</a></li>
-					<li><a href="rent-a-vehicle.php">About</a></li>
+					<li><a href="rent-a-vehicle.php">Market Updates</a></li>
 					<li><a href="why-nz.html">Current Listings</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li class="dropdown">
+						<p class="dropbtn">About</a>
+						<i class="fas fa-sort-down dropbtn"></i>
+
+						<div class="dropdown-content desktop-sub-nav-closed">
+
+							<a href="index.html" class="sub-menu-item">Meet The Team</a>
+							<a href="index.html" class="sub-menu-item">TESTIMONIALS</a>
+							<a href="#" class="sub-menu-item">TRACK RECORD</a>
+
+						</div>
+					</li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
