@@ -17,4 +17,6 @@ function barfootFeatures(){
 
 add_action('after_setup_theme', 'barfootFeatures');
 
+add_theme_support('post-thumbnails');
+
 ?>

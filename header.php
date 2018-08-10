@@ -32,18 +32,18 @@
 					<i class="fas fa-bars"></i>
 				</div>
 				<ul class="navigation mobile-nav" data-nav="close">
-					<li><a href="index.html" class="active">Home</a></li>
-					<li><a href="rent-a-vehicle.php">About</a></li>
-					<li><a href="why-nz.html">Current Listings</a></li>
+					<li><a href="/">Home</a></li>
+					<li><a href="/market-updates">About</a></li>
+					<li><a href="commercial">Current Listings</a></li>
 					<li class="dropdown">
 						<p class="dropbtn">About</a>
 						<i class="fas fa-sort-down dropbtn" id="mobile-sub-menu"></i>
 
 						<div class="dropdown-content dropdown-content-closed">
 
-							<a href="index.html" class="sub-menu-item first-menu-item">Meet The Team</a>
-							<a href="index.html" class="sub-menu-item">Testimonials</a>
-							<a href="#" class="sub-menu-item">Track Record</a>
+							<a href="/meet-the-team" class="sub-menu-item first-menu-item">Meet The Team</a>
+							<a href="/testimonials" class="sub-menu-item">Testimonials</a>
+							<a href="track-record" class="sub-menu-item">Track Record</a>
 
 						</div>
 					</li>
@@ -55,18 +55,18 @@
 					
 
 				<ul class="navigation desktop-nav" data-nav="close">
-					<li><a href="index.html" class="active">Home</a></li>
-					<li><a href="rent-a-vehicle.php">Market Updates</a></li>
-					<li><a href="why-nz.html">Current Listings</a></li>
+					<li><a href="/" class="<?php if(is_home())echo 'active' ?>">Home</a></li>
+					<li><a href="/market-updates" class="<?php if(is_page('Market Updates'))echo 'active' ?>"> Market Updates</a></li>
+					<li><a href="commercial">Current Listings</a></li>
 					<li class="dropdown">
 						<p class="dropbtn">About</a>
 						<i class="fas fa-sort-down dropbtn"></i>
 
 						<div class="dropdown-content desktop-sub-nav-closed">
 
-							<a href="index.html" class="sub-menu-item">Meet The Team</a>
-							<a href="index.html" class="sub-menu-item">TESTIMONIALS</a>
-							<a href="#" class="sub-menu-item">TRACK RECORD</a>
+							<a href="/meet-the-team" class="sub-menu-item <?php if(is_page('Meet The Team'))echo 'active' ?>">Meet The Team</a>
+							<a href="/testimonials" class="sub-menu-item <?php if(is_page('Testimonials'))echo 'active' ?>">TESTIMONIALS</a>
+							<a href="/track-record" class="sub-menu-item <?php if(is_page('Track Record'))echo 'active' ?>">TRACK RECORD</a>
 
 						</div>
 					</li>
