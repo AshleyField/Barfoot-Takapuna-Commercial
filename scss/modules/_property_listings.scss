@@ -3,3 +3,123 @@
 .epl-active-theme-barfootcustomtheme {
 	margin: 1em;
 }
+
+
+// @media only screen and (min-width : 60em) {
+// 	.property-top-content {
+// 		display: flex;
+// 		flex-wrap: wrap;
+
+// 		.property-main-image {
+// 			flex: 0 0 50%;
+// 			display: block;
+
+// 			.entry-image {
+// 				width: 50%;
+
+// 				.epl-featured-image {
+// 					a {
+// 						img {
+// 							width: 50% !important;
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+.property-title {
+	margin: .5em 0;
+}
+
+.property-subheading {
+	margin-bottom: .5em;
+
+	h3 {
+		font-weight: 400;
+	}
+}
+
+.property-details-pricing {
+	margin: .5em 0;
+
+	.pricing {
+		float: left !important;
+		font-weight: 600;
+	}
+}
+
+@media only screen and (min-width: 60em) {
+	.property-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+
+		.property-title {
+			flex: 1 0 90%;
+			margin: .5em 1em;
+		}
+
+		.property-subheading {
+			flex: 1 0 90%;
+			margin: 0 1em;
+		}
+
+		.property-featured-image {
+			flex: 1 0 45%;
+			padding: 1em;
+			max-width: 32em;
+		}
+
+		.property-price-content {
+			flex: 1 0 45%;
+			padding: 1em;
+		}
+
+		.property-details-pricing {
+			margin-top: 0;
+		}
+
+		.floor-plan-link {
+			flex: 1 0 90%;
+			margin: 0 1em;
+		}
+
+		.epl-tab-wrapper {
+			flex: 1 0 90%;
+			margin: 0 1em;
+		}
+
+		.property-gallery {
+			margin-left: .25em;
+		}
+
+		.property-video-and-map {
+			display: flex;
+
+			.property-video {
+				flex: 1 0 45%;
+			}
+
+			.property-map {
+				flex: 1 0 45%;
+				padding-left: 1em;
+
+				.epl-tab-section {
+					margin: 0;
+
+				}
+
+				#epl-default-map {
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 80em) {
+	.property-wrapper {
+		margin: 2em 10em;
+	}
+}
