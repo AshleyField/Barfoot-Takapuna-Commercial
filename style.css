@@ -532,7 +532,7 @@ footer {
   display: flex;
   flex-wrap: wrap; }
   .gallery-columns-5 .gallery-item {
-    flex: 1 0 40%; }
+    flex: 0 0 45%; }
     .gallery-columns-5 .gallery-item .gallery-icon {
       padding: .5em; }
       .gallery-columns-5 .gallery-item .gallery-icon a img {
