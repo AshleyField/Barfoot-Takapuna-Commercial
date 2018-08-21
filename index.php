@@ -11,6 +11,8 @@
 				</div>
 			</div>
 		</div>
+		
+		<?php echo do_shortcode('[listing featured=1 template="featuredSlider" ]'); ?>
 
 		<!-- Featured Properties -->
 

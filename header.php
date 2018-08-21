@@ -43,7 +43,7 @@
 
 							<a href="/meet-the-team" class="sub-menu-item first-menu-item">Meet The Team</a>
 							<a href="/testimonials" class="sub-menu-item">Testimonials</a>
-							<a href="track-record" class="sub-menu-item">Track Record</a>
+							<a href="/track-record" class="sub-menu-item">Track Record</a>
 
 						</div>
 					</li>
@@ -71,7 +71,7 @@
 						</div>
 					</li>
 					<li>
-						<a href="contact.html">Contact</a>
+						<a href="/contact">Contact</a>
 					</li>
 				</ul>
 			</nav>
