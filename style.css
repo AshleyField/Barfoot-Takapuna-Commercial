@@ -240,7 +240,7 @@ nav {
 .mid-banner {
   width: 100%;
   height: 15em;
-  background-image: url("../assets/images/banner-image-2.jpg");
+  background-image: url("./assets/images/banner-image-2.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -301,11 +301,12 @@ nav {
   .mid-banner {
     height: 17em; }
     .mid-banner-content {
-      margin: 4em 20em; }
+      margin: 4em 10em; }
       .mid-banner-content-text p {
-        font-size: 1.9em; } }
+        font-size: 1.5em; } }
 
 .property-area {
+  text-align: left;
   width: 100%; }
   .property-area-heading {
     margin: 1em; }
@@ -313,12 +314,18 @@ nav {
       font-weight: 700;
       font-size: 1.25em;
       text-transform: uppercase; }
+      .property-area-heading span a {
+        color: #000;
+        text-decoration: none; }
   .property-area-image {
     margin: 1em;
     position: relative; }
-    .property-area-image img {
-      width: 100%;
+    .property-area-image .featured-property-image-link {
       display: block; }
+      .property-area-image .featured-property-image-link img {
+        width: 100%;
+        height: 100%;
+        display: block; }
     .property-area-image:after {
       position: absolute;
       top: 0;
@@ -374,6 +381,8 @@ nav {
       margin: 1em;
       display: flex;
       flex-wrap: wrap; }
+      .property-area-info-second .epl-property-features {
+        padding: 0; }
 
 .property-slider {
   width: 100%; }
@@ -554,6 +563,36 @@ footer {
     .gallery-columns-5 .gallery-item {
       flex: 0 0 20%;
       max-width: 10em; } }
+
+.swiper-container {
+  width: 100%;
+  height: 100%; }
+
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.5); }
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: #000; }
 
 .epl-single-default {
   display: flex; }

@@ -13,43 +13,68 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class('epl-listing-post epl-property-blog epl-property-blog-slim epl-clearfix'); ?>>
-	<div class="epl-property-blog-entry-wrapper epl-clearfix">
-		<h1>zyo</h1>
-		<?php do_action('epl_property_loop_before_content'); ?>
-			<?php if ( has_post_thumbnail() ) : ?>
-				<div class="property-box slim property-box-left property-box-left-slim property-featured-image-wrapper">
-					<a href="<?php the_permalink(); ?>">
-						<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'thumbnail' ) ); ?>
-					</a>
+<!-- <div class="swiper-container">
+	<div class="swiper-wrapper"> -->
+
+			
+		<div class="swiper-slide">
+			<?php do_action('epl_property_loop_before_content'); ?>
+    		<div class="property-area-outer">
+
+				<div class="property-area">
+
+					<div class="property-area-heading">
+						<span><a href="<?php the_permalink() ?>"><?php do_action('epl_property_heading'); ?></a></span>
+					</div>
+
+					<?php if ( has_post_thumbnail() ) : ?>
+						<div class="property-area-image">
+							<a href="<?php the_permalink(); ?>" class="featured-property-image-link">
+								<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'thumbnail' ) ); ?>
+							</a>
+						</div>
+					<?php endif; ?>
+
+					<?php //the_excerpt(); ?>
+
+					<div class="property-area-info">
+						<div class="property-area-info-heading">
+							<span>
+								<?php do_action('epl_property_secondary_heading'); ?>
+							</span>
+						</div>
+						<div class="property-area-info-price">
+							<span><?php do_action('epl_property_price'); ?>
+								
+							</span>
+						</div>
+						<div class="property-area-info-address">
+							<span>
+								<?php do_action('epl_property_tab_address'); ?>
+							</span>
+						</div>
+						<div class="property-area-info-description">
+							<span>
+								<?php echo the_excerpt(); ?>
+							</span>
+						</div>
+					</div>
+
+					<div class="property-area-info-second">
+						<?php do_action('epl_property_tab_section'); ?>
+						<?php do_action('epl_property_tab_section_after'); ?>
+					</div>
+						<!-- Home Open -->
+						<?php do_action('epl_property_inspection_times'); ?>
+
+					<!-- Property Featured Icons -->
+					<div class="property-feature-icons">
+						<?php do_action('epl_property_icons'); ?>
+					</div>
 				</div>
-			<?php endif; ?>
-
-			<div class="property-box slim property-box-right property-box-right-slim property-content">
-				<!-- Heading -->
-				<h3 class="entry-title"><a href="<?php the_permalink() ?>"><?php do_action('epl_property_heading'); ?></a></h3>
-
-				<?php //the_excerpt(); ?>
-
-			<!-- Address -->
-			<div class="property-address">
-				<a href="<?php the_permalink(); ?>">
-					<?php do_action('epl_property_tab_address'); ?>
-				</a>
+				<?php do_action('epl_property_loop_after_content'); ?>
 			</div>
+		</div>
 
-				<!-- Home Open -->
-				<?php do_action('epl_property_inspection_times'); ?>
+		
 
-				<!-- Property Featured Icons -->
-				<div class="property-feature-icons">
-					<?php do_action('epl_property_icons'); ?>
-				</div>
-
-				<div class="price">
-					<?php do_action('epl_property_price'); ?>
-				</div>
-			</div>
-		<?php do_action('epl_property_loop_after_content'); ?>
-	</div>
-</div>
