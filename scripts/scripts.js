@@ -88,7 +88,7 @@ $(function(){
 		},
 		autoplay: {
 	        delay: 3000,
-	        disableOnInteraction: false,
+	        disableOnInteraction: true,
 	    }
 	});
 

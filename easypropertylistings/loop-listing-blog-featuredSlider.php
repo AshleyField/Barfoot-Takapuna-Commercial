@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					<?php if ( has_post_thumbnail() ) : ?>
 						<div class="property-area-image">
 							<a href="<?php the_permalink(); ?>" class="featured-property-image-link">
-								<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'thumbnail' ) ); ?>
+								<?php echo the_post_thumbnail() ?>
 							</a>
 						</div>
 					<?php endif; ?>
