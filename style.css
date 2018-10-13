@@ -305,6 +305,32 @@ nav {
       .mid-banner-content-text p {
         font-size: 1.5em; } }
 
+.page-banner {
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  width: 100%;
+  height: 10em; }
+  .page-banner .page-banner-head {
+    width: 100%;
+    height: 20em;
+    text-align: center;
+    color: #fff;
+    line-height: 10em;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5); }
+    .page-banner .page-banner-head h1 {
+      text-transform: uppercase;
+      font-size: 1.5em;
+      margin: 0; }
+
+@media only screen and (min-width: 40em) {
+  .page-banner {
+    height: 15em; }
+    .page-banner .page-banner-head {
+      line-height: 15em; }
+      .page-banner .page-banner-head h1 {
+        font-size: 3em; } }
+
 .property-area {
   text-align: left;
   width: 100%; }
@@ -593,6 +619,95 @@ footer {
 .swiper-pagination-bullet-active {
   color: #fff;
   background: #000; }
+
+.map {
+  position: relative;
+  margin-top: 2em;
+  margin-left: 10%;
+  padding-bottom: 5em; }
+
+.contact-wrap {
+  margin: 1em; }
+
+.contact-contactform {
+  margin-top: 1em; }
+  .contact-contactform form .contact-form-row {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; }
+    .contact-contactform form .contact-form-row span {
+      margin-top: .5em; }
+    .contact-contactform form .contact-form-row .form-text {
+      flex: 1 0 90%; }
+  .contact-contactform #submit-button {
+    flex: 1 0 90%;
+    margin-top: 1em;
+    max-width: 17em; }
+    .contact-contactform #submit-button input {
+      width: 100%;
+      text-align: center;
+      background-color: #28539c;
+      height: 3em;
+      line-height: 3em;
+      color: #fff;
+      border: none;
+      outline: 0; }
+
+@media only screen and (min-width: 60em) {
+  .page-contact {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 70%; }
+  .contact-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em 2em;
+    justify-content: center;
+    align-content: center; }
+    .contact-wrap .contact-contactform {
+      margin-top: 0; }
+    .contact-wrap .contact-info {
+      flex: 1 0 40%; }
+    .contact-wrap .contact-contactform {
+      flex: 1 0 40%;
+      align-self: center; }
+      .contact-wrap .contact-contactform form .contact-form-row {
+        display: block; }
+        .contact-wrap .contact-contactform form .contact-form-row span {
+          text-align: center;
+          display: block; }
+        .contact-wrap .contact-contactform form .contact-form-row .form-text {
+          display: block; }
+      .contact-wrap .contact-contactform #submit-button {
+        flex: 1 0 90%;
+        margin-top: 1em;
+        max-width: 17em; }
+        .contact-wrap .contact-contactform #submit-button input {
+          width: 100%;
+          text-align: center;
+          background-color: #28539c;
+          height: 3em;
+          line-height: 3em;
+          color: #fff;
+          border: none;
+          outline: 0; }
+    .contact-wrap .contact-map {
+      flex: 1 0 90%;
+      margin-top: 1em; } }
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0; }
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
 
 .epl-single-default {
   display: flex; }

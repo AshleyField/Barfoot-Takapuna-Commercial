@@ -218,3 +218,40 @@
 @media only screen and (min-width : 80em) {
 }
 
+
+//Page Banners
+
+.page-banner {
+	background-position: center;
+	background-size: cover;
+	background-repeat: none;
+	width: 100%;
+	height: 10em;
+
+	.page-banner-head {
+		width: 100%;
+		height: 20em;
+		text-align: center;
+		color: #fff;
+		line-height: 10em;
+		text-shadow: 0 0 20px rgba(0,0,0,0.5);
+
+		h1 {
+			text-transform: uppercase;
+			font-size: 1.5em;
+			margin: 0;
+		}
+	}
+}
+
+@media only screen and (min-width : 40em) {
+	.page-banner{
+		height: 15em;
+		.page-banner-head{
+			line-height: 15em;
+			h1{
+				font-size: 3em;
+			}
+		}
+	}
+}
