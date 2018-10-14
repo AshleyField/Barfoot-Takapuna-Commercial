@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	<div class="swiper-wrapper"> -->
 
 			
-		<div class="swiper-slide">
+		<div class="swiper-slide" id="index-page">
 			<?php do_action('epl_property_loop_before_content'); ?>
     		<div class="property-area-outer">
 

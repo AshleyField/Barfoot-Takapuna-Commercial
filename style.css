@@ -594,6 +594,16 @@ footer {
   color: #fff;
   background: #000; }
 
+#index-page .property-area-info-second {
+  display: block; }
+
+#index-page .epl-property-features {
+  display: block;
+  columns: 160px 1; }
+
+#index-page .epl-tab-title-property-features {
+  margin-top: 0; }
+
 .listing-loop-wrapper {
   width: 100%; }
   .listing-loop-wrapper .listing-loop-item {
@@ -636,6 +646,10 @@ footer {
     flex-wrap: wrap; }
     .listing-loop-wrapper .listing-loop-item {
       flex: 1 0 40%; } }
+
+@media only screen and (min-width: 60em) {
+  .listing-loop-wrapper .listing-loop-item {
+    flex: 0 0 33%; } }
 
 .epl-single-default {
   display: flex; }
