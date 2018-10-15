@@ -34,7 +34,7 @@
 				<ul class="navigation mobile-nav" data-nav="close">
 					<li><a href="/">Home</a></li>
 					<li><a href="/market-updates">About</a></li>
-					<li><a href="commercial">Current Listings</a></li>
+					<li><a href="/commercial">Current Listings</a></li>
 					<li class="dropdown">
 						<p class="dropbtn">About</a>
 						<i class="fas fa-sort-down dropbtn" id="mobile-sub-menu"></i>
@@ -57,7 +57,7 @@
 				<ul class="navigation desktop-nav" data-nav="close">
 					<li><a href="/" class="<?php if(is_home())echo 'active' ?>">Home</a></li>
 					<li><a href="/market-updates" class="<?php if(is_page('Market Updates'))echo 'active' ?>"> Market Updates</a></li>
-					<li><a href="commercial">Current Listings</a></li>
+					<li><a href="/commercial">Current Listings</a></li>
 					<li class="dropdown">
 						<p class="dropbtn">About</a>
 						<i class="fas fa-sort-down dropbtn"></i>
