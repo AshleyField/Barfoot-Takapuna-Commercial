@@ -310,26 +310,28 @@ nav {
   background-size: cover;
   background-repeat: none;
   width: 100%;
-  height: 10em; }
+  height: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .page-banner .page-banner-head {
+    flex: 1 0 90%;
     width: 100%;
-    height: 20em;
     text-align: center;
     color: #fff;
-    line-height: 10em;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.5); }
     .page-banner .page-banner-head h1 {
       text-transform: uppercase;
       font-size: 1.5em;
       margin: 0; }
+    .page-banner .page-banner-head .page-banner-subheading {
+      margin-top: .25em; }
 
 @media only screen and (min-width: 40em) {
   .page-banner {
     height: 15em; }
-    .page-banner .page-banner-head {
-      line-height: 15em; }
-      .page-banner .page-banner-head h1 {
-        font-size: 3em; } }
+    .page-banner .page-banner-head h1 {
+      font-size: 3em; } }
 
 .property-area {
   text-align: left;
