@@ -766,6 +766,83 @@ footer {
   width: 100%;
   position: absolute; }
 
+.blog-posts-home {
+  margin: 1em; }
+
+.blog-heading-home {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin: 1em 0; }
+
+.blog-subheading-home {
+  font-weight: 400;
+  margin: 1em 0;
+  margin-bottom: 2.5em; }
+
+.blog-post-individual-home {
+  display: flex;
+  margin: 1em 0; }
+  .blog-post-individual-home .blog-post-image-home {
+    flex: 0 0 25%;
+    height: 100%;
+    content: "";
+    display: block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 14em;
+    max-height: 14em; }
+    .blog-post-individual-home .blog-post-image-home:after {
+      content: '';
+      display: block;
+      padding-bottom: 100%; }
+  .blog-post-individual-home .blog-post-individual-content-home {
+    margin-left: 1em; }
+  .blog-post-individual-home .blog-post-title {
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 700; }
+    .blog-post-individual-home .blog-post-title a {
+      text-decoration: none;
+      color: #000; }
+  .blog-post-individual-home .blog-post-date-home {
+    color: #444448;
+    text-decoration: none;
+    font-size: .75em; }
+  .blog-post-individual-home .blog-post-read-more {
+    color: #fff;
+    background-color: #28539c;
+    display: block;
+    width: 8em;
+    height: 2em;
+    font-size: .75em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2em; }
+
+@media only screen and (min-width: 40em) {
+  .blog-post-individual-home .blog-post-title {
+    font-size: 1.1em; } }
+
+@media only screen and (min-width: 60em) {
+  .blog-posts-home {
+    margin: 2em 10em; }
+  .blog-inner-home {
+    display: flex;
+    flex-wrap: wrap; }
+    .blog-inner-home .blog-post-individual-home {
+      flex: 1 0 45%; }
+      .blog-inner-home .blog-post-individual-home:first-child {
+        margin-right: 2em; }
+  .view-all-posts {
+    flex: 1 0 90%;
+    color: red; } }
+
+@media only screen and (min-width: 60em) {
+  .blog-posts-home {
+    margin: 4em 11em; } }
+
 .epl-single-default {
   display: flex; }
 
