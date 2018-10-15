@@ -40,3 +40,19 @@
 	background: #000;
 
 }
+
+#index-page {
+
+	.property-area-info-second {
+		display: block;
+	}
+
+	.epl-property-features {
+		display: block;
+		columns: 160px 1;
+	}
+
+	.epl-tab-title-property-features {
+		margin-top: 0;
+	}
+}

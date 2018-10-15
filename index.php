@@ -162,7 +162,7 @@
 
 			</div>
 		</div>
-
+<!-- 
 		<div class="property-slider">
 			<div class="property-slider-property">
 				<div class="property-slider-property-heading">
@@ -213,6 +213,44 @@
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.
 					</span>
 				</div>
+			</div>
+		</div> -->
+
+		<div class="blog-posts-home">
+			<div class="blog-inner-home">
+				<h2 class="blog-heading-home">Market Updates</h2>
+				<?php 
+
+				$homepagePosts = new WP_Query(array(
+				  'posts_per_page' => 2
+				));
+
+				while ($homepagePosts->have_posts()){
+				  $homepagePosts->the_post(); ?>
+
+				 	<div class="blog-post-date-home">
+					 	<a class="event-summary__date event-summary__date--beige t-center" href="<?php the_permalink(); ?>">
+					 		<span>Posted On: </span>
+					 		<span class="event-summary__month"><?php the_time('M'); ?></span>
+					 		<span class="event-summary__day"><?php the_time('d'); ?></span>  
+					 	</a>
+
+						<div class="blog-post-content">
+							<h5 class="blog-post-title">
+								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+							</h5>
+							<p>
+								<?php echo wp_trim_words(get_the_content(), 18); ?>
+								<a href="<?php the_permalink(); ?>" class="nu gray"> Read more
+								</a>
+							</p>
+						</div>
+					</div>
+
+				  <?php } wp_reset_postdata();
+
+				?>
+				<p class="t-center no-margin"><a href="<?php echo site_url('/blog'); ?>" class="btn btn--yellow">View All Blog Posts</a></p>
 			</div>
 		</div>
 

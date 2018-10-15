@@ -21,4 +21,16 @@ add_action('after_setup_theme', 'barfootFeatures');
 
 add_theme_support('post-thumbnails');
 
+
+function start_bla(){
+	echo '<div class="listing-loop-wrapper">';
+}
+add_action( 'epl_property_loop_start' , 'start_bla', 30);
+
+function end_bla(){
+	echo '</div>';
+}
+add_action('epl_property_loop_end', 'end_bla', 0);
+
 ?>
+

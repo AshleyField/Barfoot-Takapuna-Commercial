@@ -620,6 +620,63 @@ footer {
   color: #fff;
   background: #000; }
 
+#index-page .property-area-info-second {
+  display: block; }
+
+#index-page .epl-property-features {
+  display: block;
+  columns: 160px 1; }
+
+#index-page .epl-tab-title-property-features {
+  margin-top: 0; }
+
+.listing-loop-wrapper {
+  width: 100%; }
+  .listing-loop-wrapper .listing-loop-item {
+    margin: 1em;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); }
+    .listing-loop-wrapper .listing-loop-item-image {
+      width: 100%; }
+      .listing-loop-wrapper .listing-loop-item-image img {
+        display: block;
+        width: 100%;
+        height: 100%; }
+    .listing-loop-wrapper .listing-loop-item-content {
+      padding: 1em; }
+      .listing-loop-wrapper .listing-loop-item-content .loop-title {
+        margin-bottom: .4em; }
+        .listing-loop-wrapper .listing-loop-item-content .loop-title span {
+          font-weight: 500; }
+      .listing-loop-wrapper .listing-loop-item-content .loop-sale-type {
+        margin-bottom: .4em; }
+      .listing-loop-wrapper .listing-loop-item-content .loop-address {
+        margin-bottom: .4em; }
+      .listing-loop-wrapper .listing-loop-item-content .loop-button {
+        margin-top: 1.5em;
+        margin-bottom: .5em; }
+        .listing-loop-wrapper .listing-loop-item-content .loop-button a {
+          margin: auto;
+          display: block;
+          width: 80%;
+          height: 2.5em;
+          background-color: #28539c;
+          color: #fff;
+          text-align: center;
+          text-decoration: none;
+          text-transform: uppercase;
+          line-height: 2.5em; }
+
+@media only screen and (min-width: 40em) {
+  .listing-loop-wrapper {
+    display: flex;
+    flex-wrap: wrap; }
+    .listing-loop-wrapper .listing-loop-item {
+      flex: 1 0 40%; } }
+
+@media only screen and (min-width: 60em) {
+  .listing-loop-wrapper .listing-loop-item {
+    flex: 0 0 33%; } }
+
 .map {
   position: relative;
   margin-top: 2em;
