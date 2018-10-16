@@ -238,6 +238,8 @@
 		text-align: center;
 		color: #fff;
 		text-shadow: 0 0 20px rgba(0,0,0,0.5);
+		max-width: 960px;
+		margin: auto;
 
 		h1 {
 			text-transform: uppercase;
@@ -252,12 +254,21 @@
 }
 
 @media only screen and (min-width : 40em) {
-	.page-banner{
+	.page-banner {
+
 		height: 15em;
-		.page-banner-head{
+		.page-banner-head {
+
 			h1{
 				font-size: 3em;
 			}
 		}
+	}
+}
+
+@media only screen and (min-width : 40em) {
+	.page-banner {
+
+		height: 17em;
 	}
 }

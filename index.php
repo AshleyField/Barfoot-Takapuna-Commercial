@@ -26,8 +26,8 @@ $bannerimage_id = get_field('banner_image');
       </div>
 
       <div class="blog-loop-content">
-        <?php the_excerpt(); ?>
-        <p><a class="btn btn--blue" href="<?php the_permalink(); ?>">Continue reading &raquo;</a></p>
+        <p class="blog-loop-excerpt"><?php echo get_the_excerpt(); ?></p>
+        <p><a class="blog-loop-button" href="<?php the_permalink(); ?>">Continue reading &raquo;</a></p>
       </div>
 
     </div>
