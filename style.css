@@ -852,7 +852,7 @@ footer {
     margin: 4em 11em; } }
 
 .blog-loop-container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: auto; }
   .blog-loop-container .blog-loop-item {
     border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
@@ -901,12 +901,108 @@ footer {
   .blog-loop-container .blog-loop-title a {
     font-size: 1.5em; } }
 
+@media only screen and (min-width: 80em) {
+  .blog-loop-container {
+    margin: 3em auto; } }
+
 .blog-post-single-outer {
   margin: 1em; }
 
 .blog-post-single {
-  max-width: 960px;
+  max-width: 1200px;
   margin: auto; }
+
+.testimonial-wrapper {
+  margin: 1em; }
+  .testimonial-wrapper .testimonial-inner {
+    max-width: 1200px;
+    margin: auto; }
+  .testimonial-wrapper .single-testimonial {
+    position: relative;
+    padding: 1em; }
+    .testimonial-wrapper .single-testimonial .testimonial-quote {
+      position: absolute;
+      top: 1em;
+      left: .5em;
+      z-index: 1; }
+      .testimonial-wrapper .single-testimonial .testimonial-quote i {
+        font-size: 2.5em;
+        color: rgba(0, 0, 0, 0.08); }
+    .testimonial-wrapper .single-testimonial .testimonial-content {
+      position: relative;
+      z-index: 5; }
+    .testimonial-wrapper .single-testimonial .testimonial-meta {
+      display: flex; }
+      .testimonial-wrapper .single-testimonial .testimonial-meta .testimonial-author p {
+        font-weight: 700;
+        border-right: 1px rgba(0, 0, 0, 0.2) solid;
+        padding-right: .5em;
+        font-size: .8em; }
+      .testimonial-wrapper .single-testimonial .testimonial-meta .testimonial-date {
+        margin-left: .5em; }
+        .testimonial-wrapper .single-testimonial .testimonial-meta .testimonial-date p {
+          font-size: .8em;
+          color: rgba(0, 0, 0, 0.5); }
+
+@media only screen and (min-width: 40em) {
+  .testimonial-wrapper .testimonial-inner {
+    display: flex;
+    flex-wrap: wrap; }
+  .testimonial-wrapper .single-testimonial {
+    flex: 0 0 45%; } }
+
+@media only screen and (min-width: 80em) {
+  .testimonial-wrapper {
+    margin: 3em auto; }
+    .testimonial-wrapper .single-testimonial {
+      flex: 0 0 30%; } }
+
+.team-wrapper {
+  margin: 1em; }
+  .team-wrapper .team-inner {
+    max-width: 1200px;
+    margin: auto; }
+  .team-wrapper .team-member {
+    border-bottom: 1px rgba(0, 0, 0, 0.2) solid; }
+  .team-wrapper .team-images {
+    flex: 0 0 20%;
+    padding: 1em; }
+    .team-wrapper .team-images .team-photo {
+      width: 100%; }
+      .team-wrapper .team-images .team-photo img {
+        display: block;
+        width: 100%; }
+    .team-wrapper .team-images .team-signature {
+      width: 100%;
+      margin-top: 1em; }
+      .team-wrapper .team-images .team-signature img {
+        display: block;
+        width: 100%; }
+  .team-wrapper .team-content {
+    flex: 0 0 75%; }
+    .team-wrapper .team-content .name-position {
+      display: flex; }
+      .team-wrapper .team-content .name-position .team-name {
+        font-weight: 700; }
+      .team-wrapper .team-content .name-position .team-position {
+        font-weight: 300;
+        margin-left: .5em; }
+        .team-wrapper .team-content .name-position .team-position:before {
+          content: "- "; }
+
+@media only screen and (min-width: 60em) {
+  .team-wrapper {
+    margin: 2em 1em; }
+  .team-member {
+    display: flex; }
+    .team-member .team-content {
+      margin-left: 2em; }
+      .team-member .team-content .team-name, .team-member .team-content .team-position {
+        font-size: 1.25em; } }
+
+@media only screen and (min-width: 80em) {
+  .team-wrapper {
+    margin: 3em 1em; } }
 
 .epl-single-default {
   display: flex; }

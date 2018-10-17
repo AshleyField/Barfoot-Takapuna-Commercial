@@ -114,7 +114,7 @@
 
 .blog-loop-container {
 
-	max-width: 960px;
+	max-width: 1200px;
 	margin: auto;
 
 	.blog-loop-item {
@@ -188,11 +188,17 @@
 	}
 }
 
+@media only screen and (min-width: 80em){
+	.blog-loop-container {
+		margin: 3em auto;
+	}
+}
+
 .blog-post-single-outer {
 	margin: 1em;
 }
 
 .blog-post-single {
-	max-width: 960px;
+	max-width: 1200px;
 	margin: auto;
 }

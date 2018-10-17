@@ -9,7 +9,10 @@
 <!-- 
 	<link rel="stylesheet" type="text/css" href="style.css"> -->
 
-	<?php wp_head(); ?>
+	<?php wp_head();
+
+	$pagetitle = get_the_title();
+	?>
 
 </head>
 <body>
@@ -32,45 +35,45 @@
 					<i class="fas fa-bars"></i>
 				</div>
 				<ul class="navigation mobile-nav" data-nav="close">
-					<li><a href="/" class="<?php if(is_home())echo 'active' ?>">Home</a></li>
-					<li><a href="/market-updates" class="<?php if(is_page('Market Updates'))echo 'active' ?>"> Market Updates</a></li>
-					<li><a href="/commercial" <?php if(is_page('Commercial'))echo 'active' ?>>Current Listings</a></li>
+					<li><a href="/" class="<?php if($pagetitle == 'Home') echo 'active' ?>">Home</a></li>
+					<li><a href="/market-updates" class="<?php if($pagename == 'market-updates') echo 'active'; ?>">Market Updates</a></li>
+					<li><a href="/commercial" class="<?php if(strpos(get_permalink(), 'commercial') !== false){ echo 'active';} ?>">Current Listings</a></li>
 					<li class="dropdown">
 						<p class="dropbtn">About</a>
 						<i class="fas fa-sort-down dropbtn"></i>
 
 						<div class="dropdown-content desktop-sub-nav-closed">
 
-							<a href="/meet-the-team" class="sub-menu-item <?php if(is_page('Meet The Team'))echo 'active' ?>">Meet The Team</a>
-							<a href="/testimonials" class="sub-menu-item <?php if(is_page('Testimonials'))echo 'active' ?>">TESTIMONIALS</a>
-							<a href="/track-record" class="sub-menu-item <?php if(is_page('Track Record'))echo 'active' ?>">TRACK RECORD</a>
+							<a href="/meet-the-team" class="sub-menu-item <?php if($pagetitle == 'Meet The Team') echo 'active' ?>">Meet The Team</a>
+							<a href="/testimonials" class="sub-menu-item <?php if($pagetitle == 'Testimonials') echo 'active' ?>">TESTIMONIALS</a>
+							<a href="/track-record" class="sub-menu-item <?php if($pagetitle == 'Track Record') echo 'active' ?>">TRACK RECORD</a>
 
 						</div>
 					</li>
 					<li>
-						<a href="contact">Contact</a>
+						<a href="contact" class="<?php if($pagetitle == 'Contact') echo 'active' ?>">Contact</a>
 					</li>
 				</ul>
 					
 
 				<ul class="navigation desktop-nav" data-nav="close">
-					<li><a href="/" class="<?php if(is_home())echo 'active' ?>">Home</a></li>
-					<li><a href="/market-updates" class="<?php if(is_page('Market Updates'))echo 'active' ?>"> Market Updates</a></li>
-					<li><a href="/commercial" class="<?php if(is_page('Current Listings'))echo 'active' ?>">Current Listings</a></li>
+					<li><a href="/" class="<?php if($pagetitle == 'Home') echo 'active' ?>">Home</a></li>
+					<li><a href="/market-updates" class="<?php if($pagename == 'market-updates') echo 'active'; ?>">Market Updates</a></li>
+					<li><a href="/commercial" class="<?php if(strpos(get_permalink(), 'commercial') !== false){ echo 'active';} ?>">Current Listings</a></li>
 					<li class="dropdown">
 						<p class="dropbtn">About</a>
 						<i class="fas fa-sort-down dropbtn"></i>
 
 						<div class="dropdown-content desktop-sub-nav-closed">
 
-							<a href="/meet-the-team" class="sub-menu-item <?php if(is_page('Meet The Team'))echo 'active' ?>">Meet The Team</a>
-							<a href="/testimonials" class="sub-menu-item <?php if(is_page('Testimonials'))echo 'active' ?>">TESTIMONIALS</a>
-							<a href="/track-record" class="sub-menu-item <?php if(is_page('Track Record'))echo 'active' ?>">TRACK RECORD</a>
+							<a href="/meet-the-team" class="sub-menu-item <?php if($pagetitle == 'Meet The Team') echo 'active' ?>">Meet The Team</a>
+							<a href="/testimonials" class="sub-menu-item <?php if($pagetitle == 'Testimonials') echo 'active' ?>">TESTIMONIALS</a>
+							<a href="/track-record" class="sub-menu-item <?php if($pagetitle == 'Track Record') echo 'active' ?>">TRACK RECORD</a>
 
 						</div>
 					</li>
 					<li>
-						<a href="contact">Contact</a>
+						<a href="contact" class="<?php if($pagetitle == 'Contact') echo 'active' ?>">Contact</a>
 					</li>
 				</ul>
 			</nav>
