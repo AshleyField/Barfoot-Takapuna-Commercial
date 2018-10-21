@@ -5,11 +5,11 @@ $bannerimage_id = get_field('banner_image');
 
 ?>
 
-<div class="page-banner" style="background-image: url('<?php echo get_theme_file_uri('assets/images/banner-image-3.jpg'); ?>')">
+<div class="page-banner" style="background-image: url('<?php the_field('banner_image'); ?>')">
 
 		<div class="page-banner-head">
 			<h1>Market Updates</h1>
-			<p class="page-banner-subheading">Keep up with our latest news</p>
+			<p class="page-banner-subheading">Keep up to date with our latest news</p>
 		</div>
 </div>
 

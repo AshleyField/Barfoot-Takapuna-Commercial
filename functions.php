@@ -22,7 +22,6 @@ add_action('after_setup_theme', 'barfootFeatures');
 
 add_theme_support('post-thumbnails');
 
-
 function start_bla(){
 	echo '<div class="listing-loop-wrapper">';
 }
@@ -32,6 +31,7 @@ function end_bla(){
 	echo '</div>';
 }
 add_action('epl_property_loop_end', 'end_bla', 0);
+
 
 function create_staff() {
 
@@ -66,6 +66,23 @@ function create_testimonials() {
   register_post_type( 'testimonials', $arg);
 }
 add_action( 'init', 'create_testimonials' );
+
+
+// function modify_link_names ($array) {
+//   $array = array(
+//     'epl_button_label_mini_web' =>  __('Website ', 'easy-property-listings'))
+//   );
+//   return $array;
+// }
+// add_filter('epl_button_label_mini_web' , __('Website ', 'easy-property-listings'));
+
+
+function modify_button_names() {
+
+    return 'Website ';
+}
+
+add_filter('epl_button_label_mini_web', 'modify_button_names');
 
 ?>
 

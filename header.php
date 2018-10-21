@@ -51,7 +51,7 @@
 						</div>
 					</li>
 					<li>
-						<a href="contact" class="<?php if($pagetitle == 'Contact') echo 'active' ?>">Contact</a>
+						<a href="/contact" class="<?php if($pagetitle == 'Contact') echo 'active' ?>">Contact</a>
 					</li>
 				</ul>
 					
@@ -73,8 +73,12 @@
 						</div>
 					</li>
 					<li>
-						<a href="contact" class="<?php if($pagetitle == 'Contact') echo 'active' ?>">Contact</a>
+						<a href="/contact" class="<?php if($pagetitle == 'Contact') echo 'active' ?>">Contact</a>
 					</li>
 				</ul>
 			</nav>
 		</div>
+
+		<?php if(strpos(get_permalink(), 'commercial') !== false){
+			get_template_part('content', 'page-banner');
+		} ?>

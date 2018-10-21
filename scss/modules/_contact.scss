@@ -1,88 +1,104 @@
+.form-box {
+	border: 2px #CAC4CF solid;
+	padding: .5em;
+	border-radius: 5px;
+	margin-bottom: .5em;
+	display: flex;
 
+	input {
+		border: none;
+		padding-left: .5em;
+		color: $barfoot-blue;
 
-// .contact-head {
-// 	text-align: center;
-// 	border-bottom: 0.5px solid #000000;
-// 	display:block;
-// 	margin-left: 40%;
-// 	margin-right: 40%;
+		&::-webkit-input-placeholder {
+			color: #CAC4CF;
+			transition: .2s ease;
+		}
 
-// }
+		&:focus::-webkit-input-placeholder {
+			color: #fff;
+		}
 
-// .bluebackground{
-// 			color: black;
-			
-// 			position: relative;
-// 			text-align: left;
-// 			display: inline-block;
-// 			flex-wrap: wrap;
-// 			justify-content: left;
-// 			align-content: left;
-// 			flex: 1 0 90%;
-// 			margin-left: 10%;
-// 			margin-top: 4em;
+		&:focus {
+			outline: none;
+		}
 
-// 		}
+	}
 
-// .address { 
-// 			position: relative;
-// 			text-align: left;
-// 			display: block;
-// 			flex-wrap: wrap;
-// 			justify-content: left;
-// 			align-content: left;
-// 			flex: 1 0 90%;
-// 			margin-left: 10%;
-// 			margin-top: 1.5em;
-// 			margin-bottom: 1em;
+	label {
+		padding-right: .5em;
+		border-right: 2px #CAC4CF solid;
+		transition: .2s ease;
 
-// }
-// .pobox {
-// 	flex: 1 0 90%;
-// 			margin-left: 10%;
-// 			margin-top: 1em;
-// }
+		i {
+			color: #CAC4CF;
+			transition: .2s ease;
+		}
+	}
 
-// .email {
-// 	margin-top: 0.5em;
-// 	margin-left: 10%;
-// }
+	&:focus-within {
+		border: 2px $barfoot-blue solid;
+		color: $barfoot-blue;
+		label {
 
-// .phone {
-// 	margin-top: 0.5em;
-// 	margin-left: 10%;
-// }
-// .alt-contact {
-// 	margin-left:10%;
-// 	margin-top: 2em;
-// 	margin-bottom: 1em;
-// }
+			border-color: $barfoot-blue;
 
-// .contact-form {
-// 	display: inline-block;
-// 	position: relative;
-// 			margin-left: 8.9%;
-// 			width: 100%;
-// 			font-family: 'Roboto', sans-serif; 
-// }
-// .message {
+			i {
+				color: $barfoot-blue;
+			}
+		}
+	}
+}
+
+#form-message {
+
+	.your-message{
+		width: 100%;
+
+		textarea {
+			width: 95%;
+			border: 0;
+			outline: none;
+			padding-left: .5em;
+			color: $barfoot-blue;
+			resize:vertical;
+
+			&::-webkit-input-placeholder {
+			color: #CAC4CF;
+			transition: .2s ease;
+			}
+
+			&:focus::-webkit-input-placeholder {
+				color: #fff;
+			}
+		}
+	}
 	
-// }
+}
 
+.form-submit .button{
+	width: 140px;
+	height: 40px;
+	border-radius: 5px;
+	background-color: $barfoot-blue;
+	color: white;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 15px;
+	border: none;
+	transition: .2s ease;
+	justify-content: center;
+}
 
+.form-submit {
+	display: flex;
+	justify-content: center;
+	padding-top: 10px;
+}
 
-
-// .button{
-// 	background-color: #0057a1;
-//     border: none;
-//     color: white;
-//     padding:10px 30px;
-//     text-align: center;
-//     text-decoration: none;
-//     display: inline-block;
-//     font-size: 16px;
-//     box-shadow: 2px 4px 5px black;
-// }
+.form-submit .button:hover {
+	background-color: #0095FF;
+}
 
 .map {
 	
@@ -90,9 +106,6 @@
 	margin-top: 2em;
 	margin-left: 10%;
 	padding-bottom: 5em;
-
-
-
 }
 
 .contact-wrap {
@@ -139,29 +152,19 @@
 	}
 }
 
-
-// .send {
-// 	background-color: #0057a1;
-//     border: none;
-//     color: white;
-//     padding:10px 30px;
-//     text-align: center;
-//     text-decoration: none;
-//     display: inline-block;
-//     font-size: 16px;
-// }
-
 @media only screen and (min-width : 60em) {
 	.page-contact {
 		display: flex;
 		justify-content: space-around;
 		flex-wrap: wrap;
-		width: 70%
+		width: 100%;
 	}
+
 	.contact-wrap {
+		max-width: 1200px;
 		display: flex;
 		flex-wrap: wrap;
-		margin: 1em 2em;
+		margin: 2em auto;
 		justify-content: center;
 		align-content: center;
 
@@ -171,11 +174,11 @@
 		}
 
 		.contact-info {
-			flex: 1 0 40%;
+			flex: 1 0 45%;
 		}
 
 		.contact-contactform {
-			flex: 1 0 40%;
+			flex: 1 0 45%;
 			align-self: center;
 
 			form {
@@ -217,6 +220,12 @@
 			flex: 1 0 90%;
 			margin-top: 1em;
 		}
+	}
+}
+
+@media only screen and (min-width : 80em) {
+	.contact-wrap {
+		margin: 3em auto;
 	}
 }
 

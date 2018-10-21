@@ -1,12 +1,9 @@
 <?php get_header();
 	$bannerimage_id = get_field('banner_image');
-	?>
-	<div class="page-banner" style="background-image: url('<?php echo $bannerimage_id['url'] ?>')">
 
-		<div class="page-banner-head">
-			<h1><?php the_field('banner_heading');?></h1>
-		</div>
-	</div>
+	get_template_part('content', 'page-banner');
+
+	?>
 	<div class="contact-wrap">
 
 		<div class="page-contact">
@@ -22,7 +19,7 @@
 			</div>
 
 			<div class="contact-contactform">
-				<?php echo do_shortcode('[contact-form-7 id="59" title="Contact us form"]')?>
+				<?php echo do_shortcode('[contact-form-7 id="82" title="Barfoot Contact"]')?>
 			</div>
 
 			<div class="contact-map">
