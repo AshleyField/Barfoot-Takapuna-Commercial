@@ -79,7 +79,7 @@ add_action( 'init', 'create_testimonials' );
 
 function modify_button_names() {
 
-    return 'Website ';
+    return 'View listing on barfoot.co.nz ';
 }
 
 add_filter('epl_button_label_mini_web', 'modify_button_names');
