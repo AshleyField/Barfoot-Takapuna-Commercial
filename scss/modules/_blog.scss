@@ -1,7 +1,9 @@
 //blog posts home page
 
 .blog-posts-home {
-	margin: 1em;
+	margin: 1em auto;
+	padding-left: 1em;
+	max-width: 1400px;
 }
 
 .blog-heading-home {
@@ -84,12 +86,10 @@
 }
 
 @media only screen and (min-width : 60em) {
-	.blog-posts-home {
-		margin: 2em 10em;
-	}
 	.blog-inner-home {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 
 		.blog-post-individual-home {
 			flex: 1 0 45%;
@@ -106,15 +106,9 @@
 	}
 }
 
-@media only screen and (min-width : 60em) {
-	.blog-posts-home {
-		margin: 4em 11em;
-	}
-}
-
 .blog-loop-container {
 
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: auto;
 
 	.blog-loop-item {
@@ -199,6 +193,6 @@
 }
 
 .blog-post-single {
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: auto;
 }

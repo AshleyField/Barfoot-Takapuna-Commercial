@@ -1,0 +1,81 @@
+.track-record-wrapper {
+	max-width: 1400px;
+	margin: 0 auto;
+
+	.track-record-inner {
+		margin: 1em;
+	}
+
+	.track-record-image {
+		position: relative;
+
+		img {
+			width: 100%;
+			display: block;
+		}
+
+		.sale-type {
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 0;
+			margin: 0;
+			padding: .75em 2em;
+			color: #fff;
+			font-size: 1.2em;
+			text-transform: uppercase;
+			font-weight: 700;
+			box-shadow: -2px 2px 7px rgba(0,0,0,0.5);
+		}
+
+		.label-blue {
+			background-color: $barfoot-blue;
+		}
+
+		.label-red {
+			background-color: $barfoot-red;
+		}
+	}
+
+	.track-record-title {
+		p {
+			font-weight: 700;
+			font-size: 1.25em;
+		}
+	}
+
+	.track-record-address {
+		p {
+			color: #606060;
+			font-size: .9em;
+		}
+	}
+}
+@media only screen and (min-width : 43em) {
+	.track-record-property {
+			
+		box-shadow: 0 0 3px rgba(0,0,0,0.3);
+	}
+	.track-record-inner {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.track-record-property {
+		flex: 0 0 45%;
+		margin: 1em;
+	}
+
+	.track-record-content {
+		padding: 0 1em;
+	}
+}
+
+@media only screen and (min-width : 60em) {
+
+	.track-record-property {
+		flex: 0 0 30%;
+		margin: 1em;
+	}
+}

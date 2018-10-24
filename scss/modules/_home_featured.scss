@@ -1,9 +1,8 @@
-.listing-loop-wrapper {
+.home-featured-wrapper {
 	width: 100%;
 	max-width: 1400px;
 	margin: 1em auto;
-
-	.listing-loop-item {
+	.home-featured-item {
 		margin: 1em;
 		box-shadow: 0 0 3px rgba(0,0,0,0.3);
 
@@ -20,25 +19,29 @@
 		&-content {
 			padding: 1em;
 
-			.loop-title {
+			.home-title {
 				margin-bottom: .4em;
 				span {
 					font-weight: 500;
 				}
 			}
 
-			.loop-sale-type {
+			.home-sale-type {
 				margin-bottom: .4em;
 			}
 
-			.loop-address {
+			.home-address {
 				margin-bottom: .4em;
 			}
 
-			.loop-extras {
+			.home-extras {
+				margin: 1em 0 2em 0;
+				ul {
+					padding: 0;
+				}
 			}
 
-			.loop-button {
+			.home-button {
 				margin-top: 1.5em;
 				margin-bottom: .5em;
 				a {
@@ -59,20 +62,20 @@
 }
 
 @media only screen and (min-width : 40em) {
-	.listing-loop-wrapper {
+	.home-featured-wrapper {
 		display: flex;
 		flex-wrap: wrap;
 
-		.listing-loop-item {
+		.home-featured-item {
 			flex: 1 0 40%;
 		}
 	}
 }
 
 @media only screen and (min-width : 60em) {
-	.listing-loop-wrapper {
+	.home-featured-wrapper {
 
-		.listing-loop-item {
+		.home-featured-item {
 			flex: 0 0 33%;
 		}
 	}

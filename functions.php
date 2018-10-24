@@ -5,7 +5,7 @@ function barfootCustomFiles(){
 	wp_enqueue_script('barfootJavascript', get_theme_file_uri('/minified/scripts.min.js'), NULL, '1.0', true);
 	wp_enqueue_script('swiperJS', get_theme_file_uri('/minified/swiper.min.js'), NULL, '1.0', true);
 	wp_enqueue_script('jQuery', '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
-	wp_enqueue_style('customGoogleFonts', '//fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+	wp_enqueue_style('customGoogleFonts', 'https://fonts.googleapis.com/css?family=Montserrat:300,700,900|Roboto:300,400,500,700');
 	wp_enqueue_style('fontAwesome', 'https://use.fontawesome.com/releases/v5.4.1/css/all.css');
 	wp_enqueue_style('swiperStyles', get_theme_file_uri('/minified/swiper.min.css'));
 	wp_enqueue_style('barfootMainStyles', get_stylesheet_uri());
@@ -66,6 +66,23 @@ function create_testimonials() {
   register_post_type( 'testimonials', $arg);
 }
 add_action( 'init', 'create_testimonials' );
+
+function create_track_record() {
+
+  $arg = array(
+      'labels' => array(
+        'name' => __( 'Track Record' ),
+        'singular_name' => __( 'Track Record' ),
+        'menu_name' => __('Track Record')
+      ),
+      'public' => true,
+      'show_in_nav_menus' => true,
+      'menu_icon' => 'dashicons-awards'
+    );
+
+  register_post_type( 'trackrecord', $arg);
+}
+add_action( 'init', 'create_track_record' );
 
 
 // function modify_link_names ($array) {

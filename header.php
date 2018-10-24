@@ -79,6 +79,11 @@
 			</nav>
 		</div>
 
-		<?php if(strpos(get_permalink(), 'commercial') !== false){
+		<?php 
+		$url_prefix = get_bloginfo('url');
+		global $wp;  
+		$current_url = home_url(add_query_arg(array(),$wp->request));
+		if($current_url == $url_prefix.'/commercial'){
 			get_template_part('content', 'page-banner');
-		} ?>
+		} 
+		?>

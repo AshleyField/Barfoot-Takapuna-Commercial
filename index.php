@@ -5,7 +5,7 @@ $bannerimage_id = get_field('banner_image');
 
 ?>
 
-<div class="page-banner" style="background-image: url('<?php the_field('banner_image'); ?>')">
+<div class="page-banner" style="background-image: url('<?php the_field('blog_main_image'); ?>')">
 
 		<div class="page-banner-head">
 			<h1>Market Updates</h1>

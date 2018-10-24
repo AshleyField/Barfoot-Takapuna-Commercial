@@ -19,3 +19,28 @@ html {
 #sidebar {
 	display: none;
 }
+
+.archive-header {
+	display: none;
+}
+
+.home-heading {
+	margin: 1em;
+	max-width: 1400px;
+	margin-bottom: 0;
+	h2 {
+		
+		text-transform: uppercase;
+		font-size: 1.5em;
+	}
+}
+
+@media only screen and (min-width : 1400px) {
+	.home-heading{
+		padding-left: 1em;
+		margin: 1em auto;
+		margin-top: 2em;
+		margin-bottom: 0;
+	}
+}
+	
