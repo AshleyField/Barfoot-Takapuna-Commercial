@@ -6,6 +6,10 @@
 	max-width: 1400px;
 }
 
+.blog-post-title {
+	margin: 1em 0;
+}
+
 .blog-heading-home {
 	text-transform: uppercase;
 	font-size: 1.5em;
@@ -74,6 +78,38 @@
 		text-align: center;
 		line-height: 2em;
 	}
+}
+
+.back-to-all {
+	display: block;
+	max-width: 14em;
+	text-align: center;
+	margin: 2em 0;
+
+	a {
+		color: #fff;
+		text-decoration: none;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: $barfoot-blue;
+		padding: 1em 0;
+	}
+
+}
+
+.posted-by-single {
+	span {
+		color: #606060;
+
+		a {
+			color: $barfoot-blue;
+		}
+	}
+}
+
+.blog-post-title {
+	margin-bottom: .25em;
 }
 
 @media only screen and (min-width : 40em) {
@@ -195,4 +231,10 @@
 .blog-post-single {
 	max-width: 1400px;
 	margin: auto;
+}
+
+@media only screen and (min-width: 60em){
+	.blog-post-single-outer {
+		margin: 3em 1em 5em 1em;
+	}
 }
