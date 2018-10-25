@@ -792,73 +792,66 @@ footer {
   .listing-loop-wrapper .listing-loop-item {
     flex: 0 0 33%; } }
 
-.form-box {
-  border: 2px #CAC4CF solid;
-  padding: .5em;
-  border-radius: 5px;
-  margin-bottom: .5em;
-  display: flex; }
-  .form-box input {
-    border: none;
-    padding-left: .5em;
-    color: #28539c; }
-    .form-box input::-webkit-input-placeholder {
-      color: #CAC4CF;
-      transition: .2s ease; }
-    .form-box input:focus::-webkit-input-placeholder {
-      color: #fff; }
-    .form-box input:focus {
-      outline: none; }
-  .form-box label {
-    padding-right: .5em;
-    border-right: 2px #CAC4CF solid;
-    transition: .2s ease; }
-    .form-box label i {
-      color: #CAC4CF;
-      transition: .2s ease; }
-  .form-box:focus-within {
-    border: 2px #28539c solid;
-    color: #28539c; }
-    .form-box:focus-within label {
-      border-color: #28539c; }
-      .form-box:focus-within label i {
-        color: #28539c; }
+h2 {
+  font-size: 2em;
+  margin-bottom: 1em; }
 
-#form-message .your-message {
-  width: 100%; }
-  #form-message .your-message textarea {
-    width: 95%;
-    border: 0;
-    outline: none;
-    padding-left: .5em;
-    color: #28539c;
-    resize: vertical; }
-    #form-message .your-message textarea::-webkit-input-placeholder {
-      color: #CAC4CF;
-      transition: .2s ease; }
-    #form-message .your-message textarea:focus::-webkit-input-placeholder {
-      color: #fff; }
-
-.form-submit .button {
-  width: 140px;
-  height: 40px;
-  border-radius: 5px;
-  background-color: #28539c;
-  color: white;
-  font-weight: 300;
-  font-style: italic;
-  font-size: 15px;
-  border: none;
-  transition: .2s ease;
-  justify-content: center; }
-
-.form-submit {
+.form-row {
   display: flex;
-  justify-content: center;
-  padding-top: 10px; }
+  flex-wrap: wrap; }
+  .form-row h2 {
+    flex: 1 0 90%;
+    font-size: .9em;
+    font-weight: 300;
+    margin-bottom: .5em; }
+  .form-row .row-item {
+    flex: 1 0 90%;
+    margin-bottom: 1em; }
+    .form-row .row-item p {
+      margin-top: .3em;
+      font-size: .7em;
+      font-weight: 300; }
+    .form-row .row-item input {
+      width: 100%;
+      height: 2em;
+      background-color: #fafafa;
+      border: 1px #ccc solid;
+      border-radius: 3px;
+      padding-left: .5em;
+      font-weight: 300;
+      font-size: .9em;
+      outline: none; }
+    .form-row .row-item textarea {
+      width: 100%;
+      background-color: #fafafa;
+      border: 1px #ccc solid;
+      border-radius: 3px;
+      resize: vertical;
+      padding: 1em .5em;
+      font-weight: 300;
+      font-size: .9em;
+      outline: none; }
+  .form-row .first-name {
+    margin-right: 1em; }
+  .form-row .first-name, .form-row .last-name {
+    flex: 1 0 45%; }
 
-.form-submit .button:hover {
-  background-color: #0095FF; }
+.submit input {
+  padding: .7em 2.5em;
+  background-color: #28539c;
+  border-radius: 3px;
+  color: #fff; }
+
+.contact-email {
+  font-weight: 300;
+  margin-bottom: 2em; }
+
+.contact-wrap {
+  max-width: 1400px;
+  margin: 1em auto; }
+
+.page-contact {
+  padding: 1em; }
 
 .map {
   position: relative;
@@ -866,80 +859,8 @@ footer {
   margin-left: 10%;
   padding-bottom: 5em; }
 
-.contact-wrap {
-  margin: 1em; }
-
-.contact-contactform {
-  margin-top: 1em; }
-  .contact-contactform form .contact-form-row {
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap; }
-    .contact-contactform form .contact-form-row span {
-      margin-top: .5em; }
-    .contact-contactform form .contact-form-row .form-text {
-      flex: 1 0 90%; }
-  .contact-contactform #submit-button {
-    flex: 1 0 90%;
-    margin-top: 1em;
-    max-width: 17em; }
-    .contact-contactform #submit-button input {
-      width: 100%;
-      text-align: center;
-      background-color: #28539c;
-      height: 3em;
-      line-height: 3em;
-      color: #fff;
-      border: none;
-      outline: 0; }
-
-@media only screen and (min-width: 60em) {
-  .page-contact {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%; }
-  .contact-wrap {
-    max-width: 1400px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 2em auto;
-    justify-content: center;
-    align-content: center; }
-    .contact-wrap .contact-contactform {
-      margin-top: 0; }
-    .contact-wrap .contact-info {
-      flex: 1 0 45%; }
-    .contact-wrap .contact-contactform {
-      flex: 1 0 45%;
-      align-self: center; }
-      .contact-wrap .contact-contactform form .contact-form-row {
-        display: block; }
-        .contact-wrap .contact-contactform form .contact-form-row span {
-          text-align: center;
-          display: block; }
-        .contact-wrap .contact-contactform form .contact-form-row .form-text {
-          display: block; }
-      .contact-wrap .contact-contactform #submit-button {
-        flex: 1 0 90%;
-        margin-top: 1em;
-        max-width: 17em; }
-        .contact-wrap .contact-contactform #submit-button input {
-          width: 100%;
-          text-align: center;
-          background-color: #28539c;
-          height: 3em;
-          line-height: 3em;
-          color: #fff;
-          border: none;
-          outline: 0; }
-    .contact-wrap .contact-map {
-      flex: 1 0 90%;
-      margin-top: 1em; } }
-
-@media only screen and (min-width: 80em) {
-  .contact-wrap {
-    margin: 3em auto; } }
+.contact-form {
+  margin-right: 2em; }
 
 .map-responsive {
   overflow: hidden;
@@ -953,6 +874,28 @@ footer {
   height: 100%;
   width: 100%;
   position: absolute; }
+
+@media only screen and (min-width: 40em) {
+  .contact-contactform {
+    margin: 1em 5em; }
+  .contact-form {
+    margin: 2em 0; } }
+
+@media only screen and (min-width: 60em) {
+  .page-contact {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3em 1em; }
+    .page-contact .contact-contactform {
+      flex: 1 0 50%;
+      margin: 0 1em;
+      margin-right: 3em; }
+    .page-contact .contact-info {
+      flex: 1 0 25%;
+      margin-left: 2em; }
+    .page-contact .contact-map {
+      flex: 1 0 90%;
+      margin: 1em; } }
 
 .blog-posts-home {
   margin: 1em auto;

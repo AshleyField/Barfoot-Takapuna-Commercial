@@ -7,19 +7,24 @@
 	<div class="contact-wrap">
 
 		<div class="page-contact">
+
+
+
+			<div class="contact-contactform">
+				<h2>Contact Us</h2>
+				<p>If you have a question or would like to have a chat please fill out the form below or give us a call on 09 489 5084.</p>
+				<p class="contact-email">Alternativley send us an email at <a href="mailto:email">email@email.com</a></p>
+
+				<?php echo do_shortcode('[contact-form-7 id="103" title="Barfoot Contact 2"]')?>
+			</div>
+
 			<div class="contact-info">
 				<?php
 					while(have_posts()) {
 						the_post(); ?>
-						<p class="page-content-info">
 							<?php the_content(); ?>
-						</p>
 
 				<?php }?>
-			</div>
-
-			<div class="contact-contactform">
-				<?php echo do_shortcode('[contact-form-7 id="82" title="Barfoot Contact"]')?>
 			</div>
 
 			<div class="contact-map">
@@ -29,6 +34,5 @@
 			</div>
 		</div>
 	</div>
-	
 
 <? get_footer();?>
