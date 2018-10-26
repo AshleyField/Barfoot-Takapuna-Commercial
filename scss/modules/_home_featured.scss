@@ -68,12 +68,27 @@
 
 		.home-featured-item {
 			flex: 1 0 40%;
+
+			&-content {
+
+				.home-button {
+					a {
+						transition: .5s ease all;
+
+						&:hover {
+							background-color: lighten($barfoot-blue, 10%);
+						}
+					}
+				}
+			}
 		}
+
 	}
 }
 
 @media only screen and (min-width : 60em) {
 	.home-featured-wrapper {
+		margin-bottom: 3em;
 
 		.home-featured-item {
 			flex: 0 0 33%;

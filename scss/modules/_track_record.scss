@@ -51,6 +51,19 @@
 		}
 	}
 }
+
+.record-sticker-container {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	width: 6em;
+
+	.record-sticker {
+		width: 100%;
+		display: block;
+	}
+}
+
 @media only screen and (min-width : 43em) {
 	.track-record-property {
 			
@@ -77,5 +90,22 @@
 	.track-record-property {
 		flex: 0 0 30%;
 		margin: 1em;
+	}
+
+	.track-record-wrapper {
+		.track-record-inner {
+			margin: 3em 0;
+		}
+	}
+
+	
+}
+
+@media only screen and (min-width : 80em) {
+
+	.track-record-wrapper {
+		.track-record-inner {
+			margin: 5em 0;
+		}
 	}
 }

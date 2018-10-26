@@ -50,6 +50,23 @@ function create_staff() {
 }
 add_action( 'init', 'create_staff' );
 
+function create_slides() {
+
+  $arg = array(
+      'labels' => array(
+        'name' => __( 'Slides' ),
+        'singular_name' => __( 'Slide' ),
+        'menu_name' => __('Slides')
+      ),
+      'public' => true,
+      'show_in_nav_menus' => true,
+      'menu_icon' => 'dashicons-slides'
+    );
+
+  register_post_type( 'slides', $arg);
+}
+add_action( 'init', 'create_slides' );
+
 function create_testimonials() {
 
 	$arg = array(

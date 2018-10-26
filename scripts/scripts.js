@@ -89,7 +89,9 @@ $(function(){
 		autoplay: {
 	        delay: 3000,
 	        disableOnInteraction: true,
-	    }
+	    },
+	    speed: 1800,
+
 	});
 
 });

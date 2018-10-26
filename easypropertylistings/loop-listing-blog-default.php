@@ -30,8 +30,7 @@ global $property;
 			<span><?php do_action('epl_property_address'); ?></span>
 		</div>
 		<div class="loop-extras">
-			<span>4 Bedrooms</span>
-			<span>5 Bathrooms</span>
+			<?php do_action('epl_property_tab_section'); ?>
 		</div>
 
 		<div class="loop-button">

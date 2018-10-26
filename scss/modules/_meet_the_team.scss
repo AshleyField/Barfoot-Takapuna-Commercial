@@ -8,6 +8,11 @@
 
 	.team-member {
 		border-bottom: 1px rgba(0,0,0,0.2) solid;
+		padding: 2em 0;
+
+		&:last-child{
+			border: 0;
+		}
 	}
 
 	.team-images {
@@ -16,16 +21,6 @@
 
 		.team-photo {
 			width: 100%;
-
-			img {
-				display: block;
-				width: 100%;
-			}
-		}
-
-		.team-signature {
-			width: 100%;
-			margin-top: 1em;
 
 			img {
 				display: block;
@@ -54,6 +49,17 @@
 				}
 			}
 		}
+
+		.team-signature {
+			width: 100%;
+			margin-top: 1em;
+			max-width: 10em;
+
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
 	}
 }
 
@@ -78,5 +84,6 @@
 @media only screen and (min-width : 80em) {
 	.team-wrapper {
 		margin: 3em 1em;
+		margin-bottom: 5em;
 	}
 }

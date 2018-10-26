@@ -23,6 +23,11 @@
 	-webkit-align-items: center;
 	align-items: center;
 	flex-wrap: wrap;
+
+	.swiper-button-next {
+		fill: red;
+		background-image: fill(red);
+	}
 }
 
 //Pagionation Bullets
@@ -31,14 +36,27 @@
 
 	width: 10px;
 	height: 10px;
-	background: rgba(0,0,0,0.5);
+	background: $barfoot-blue;
+	opacity: .9;
 
  }
 .swiper-pagination-bullet-active {
 
 	color:#fff;
-	background: #000;
+	background: lighten($barfoot-blue, 10%);
 
+}
+
+.swiper-button-next, .swiper-button-prev {
+	display: none;
+}
+
+.swiper-button-next {
+	margin-right: 1em;
+}
+
+.swiper-button-prev {
+	margin-left: 1em;
 }
 
 #index-page {
@@ -54,5 +72,18 @@
 
 	.epl-tab-title-property-features {
 		margin-top: 0;
+	}
+}
+
+@media only screen and (min-width: 40em){
+	.swiper-button-next, .swiper-button-prev {
+		display: block;
+		opacity: .5;
+		transition: .4s ease all;
+	}
+
+	.swiper-button-next:hover, .swiper-button-prev:hover {
+		display: block;
+		opacity: 1;
 	}
 }

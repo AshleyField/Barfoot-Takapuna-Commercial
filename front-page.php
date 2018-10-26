@@ -1,16 +1,8 @@
 <?php get_header(); ?>
 
 		<!-- Hero Banner -->
-		
-		<div class="hero">
-			<div class="hero-overlay">
-				<div class="hero-content">
-					<h1>Sell with confidence</h1>
-					<h2>Choose Barfoot & Thompson Takapuna</h2>
-					<div class="horizontal-bar"></div>
-				</div>
-			</div>
-		</div>
+
+		<?php get_template_part('slider'); ?>
 
 		<div class="home-heading">
 			<h2>Featured Properties</h2>

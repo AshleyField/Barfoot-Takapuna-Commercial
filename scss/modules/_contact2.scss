@@ -66,9 +66,20 @@ h2 {
 		background-color: $barfoot-blue;
 		border-radius: 3px;
 		color: #fff;
+		transition: .5s ease all;
+
+		&:hover {
+			background-color: lighten($barfoot-blue, 10%);
+		}
 
 	}
+
+
 	
+}
+
+.contact-info {
+	margin: 2em 0;
 }
 
 .contact-email {
@@ -134,6 +145,7 @@ h2 {
 
 		.contact-info {
 			flex: 1 0 25%;
+			margin: 0;
 			margin-left: 2em;
 		}
 
