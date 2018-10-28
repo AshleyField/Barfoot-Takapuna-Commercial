@@ -6,7 +6,6 @@
 	.listing-loop-item {
 		margin: 1em;
 		box-shadow: 0 0 3px rgba(0,0,0,0.3);
-		background-color: rgba(0,0,0,.02);
 
 		&-image {
 			width: 100%;
@@ -24,7 +23,7 @@
 			.loop-title {
 				margin-bottom: .4em;
 				span {
-					font-weight: 600;
+					font-weight: 500;
 				}
 			}
 
@@ -37,8 +36,10 @@
 			}
 
 			.loop-extras {
-				display: flex;
-				justify-content: space-between;
+
+				ul {
+					padding: 0;
+				}
 			}
 
 			.loop-button {
@@ -58,17 +59,6 @@
 				}
 			}
 		}
-	}
-}
-
-.loop-extras-item {
-	display: flex;
-	margin-top: .5em;
-	margin-right: .5em;
-
-	p {
-		margin: 0;
-		margin-left: .5em;
 	}
 }
 

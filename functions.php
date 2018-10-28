@@ -67,6 +67,44 @@ function create_slides() {
 }
 add_action( 'init', 'create_slides' );
 
+function create_properties() {
+
+  $arg = array(
+      'labels' => array(
+        'name' => __( 'Properties' ),
+        'singular_name' => __( 'Property' ),
+        'menu_name' => __('Properties')
+      ),
+      'public' => true,
+      'show_in_nav_menus' => true,
+      'menu_icon' => 'dashicons-admin-home'
+    );
+
+  register_post_type( 'properties', $arg);
+
+  $arg = array(
+
+    'label' => 'Property Status',
+    'rewrite' => array( 'slug' => 'property-status' ),
+    'hierarchical' => true,
+    'show_admin_column' => true,
+  );
+
+  register_taxonomy('property_status', 'properties', $arg);
+
+  $arg = array(
+
+    'label' => 'Sale Type',
+    'rewrite' => array( 'slug' => 'sale-type' ),
+    'hierarchical' => true,
+    'show_admin_column' => true,
+  );
+
+  register_taxonomy('sale_type', 'properties', $arg);
+
+}
+add_action( 'init', 'create_properties' );
+
 function create_testimonials() {
 
 	$arg = array(
@@ -100,6 +138,7 @@ function create_track_record() {
   register_post_type( 'trackrecord', $arg);
 }
 add_action( 'init', 'create_track_record' );
+
 
 
 // function modify_link_names ($array) {
