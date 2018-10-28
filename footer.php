@@ -1,37 +1,44 @@
 		<footer>
 			<div class="footer-inner">
-				<div class="footer-left">
-					<div class="footer-logo">
-						<img src="<?php echo get_bloginfo('template_directory');?>/assets/images/Barfoot-and-Thompson-Logo-Large.jpg?>" alt="">
-					</div>
-					<div class="footer-quote">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi quos eum provident, magni quaerat cum blanditiis error fuga consequuntur rem.</p>
+				<div class="footer-row top-row">
+					<ul class="footer-nav">
+						<li class="footer-nav-item">
+							<a href="/" class="<?php if($pagetitle == 'Home') echo 'active' ?>">Home</a></li>
+						<li class="footer-nav-item">
+							<a href="/market-updates" class="<?php if($pagename == 'market-updates') echo 'active'; ?>">Market Updates</a></li>
+						<li class="footer-nav-item">
+							<a href="/commercial" class="<?php if(strpos(get_permalink(), 'commercial') !== false){ echo 'active';} ?>">Current Listings</a></li>
+						<li class="footer-nav-item">
+							<a href="/meet-the-team" class="<?php if($pagetitle == 'Meet The Team') echo 'active' ?>">Meet The Team</a>
+						</li>
+						<li class="footer-nav-item">
+							<a href="/testimonials" class="<?php if($pagetitle == 'Testimonials') echo 'active' ?>">TESTIMONIALS</a>
+						</li>
+						<li class="footer-nav-item">
+							<a href="/track-record" class="<?php if($pagetitle == 'Track Record') echo 'active' ?>">TRACK RECORD</a>
+						</li>
+						<li class="footer-nav-item">
+							<a href="/contact" class="<?php if($pagetitle == 'Contact') echo 'active' ?>">Contact</a>
+						</li>
+					</ul>
+					<div class="footer-image">
+						<img src="<?php echo bloginfo('template_directory')?>/assets/images/Barfoot-and-Thompson-Logo-Large.jpg" alt="">
 					</div>
 				</div>
-				<div class="footer-right-side">
-					<div class="footer-middle">
-						<h2>Contact Us</h2>
-						<p>Email</p>
-						<p>Address</p>
-						<p>Phone</p>
+				<div class="footer-spacer"></div>
+				<div class="footer-row bottom-row">
+					<div class="footer-address">
+						<p>Cnr Lake Road &, Blomfield Spa, Takapuna, Auckland 0622</p>
 					</div>
-					<div class="footer-right">
-						<h2>Follow Us</h2>
-						<div class="social-icons">
-							<a href=""><i class="fab fa-facebook-square"></i></a>
-							<a href=""><i class="fab fa-linkedin"></i></a>
-							<a href=""><i class="fab fa-instagram"></i></a>
-						</div>
+					<div class="footer-copy">© Copyright Barfoot & Thompson 2018 - <a href="www.precisionweb.co.nz">Website by Precision Web</a></div>
+					<div class="footer-social">
+						<i class="fab fa-facebook-f"></i>
+						<i class="fab fa-linkedin-in"></i>
+						<i class="fab fa-instagram"></i>
 					</div>
 				</div>
-				
-			</div>
-			<div class="footer-by">
-				<span>Website By <a href="">Precision Web</a></span>
 			</div>
 		</footer>
-
-
 	</div>
 
 
