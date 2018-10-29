@@ -59,21 +59,23 @@ $coordinates = get_field('coordinates');
 			
 		</div>
 
-		<?php 
-		$floorplan = get_field('floorplan');
-		if($floorplan){ ?>
-		<div class="floor-plan-link property-button">
-			<a href="<?php the_field('floorplan'); ?>" target="_blank">Download Floor Plan</a>
-		</div>
-		<?php }; ?>
+		<div class="property-buttons">
+			<?php 
+				$floorplan = get_field('floorplan');
+				if($floorplan){ ?>
+				<div class="floor-plan-link property-button">
+					<a href="<?php the_field('floorplan'); ?>" target="_blank">Download Floor Plan</a>
+				</div>
+				<?php }; ?>
 
-		<?php 
-		$floorplan = get_field('barfoot_url');
-		if($floorplan){ ?>
-		<div class="barfoot-main-link property-button">
-			<a href="https://www.barfoot.co.nz/<?php the_field('property_id'); ?>" target="_blank">View on barfoot.co.nz</a>
+				<?php 
+				$floorplan = get_field('barfoot_url');
+				if($floorplan){ ?>
+				<div class="barfoot-main-link property-button">
+					<a href="https://www.barfoot.co.nz/<?php the_field('property_id'); ?>" target="_blank">View on barfoot.co.nz</a>
+				</div>
+				<?php }; ?>
 		</div>
-		<?php }; ?>
 		
 		
 		<div class="property-details">

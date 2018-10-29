@@ -662,6 +662,8 @@ footer {
   margin-bottom: .5em; }
   .property-subheading h3 {
     font-weight: 700; }
+  .property-subheading .address-heading {
+    font-weight: 400; }
 
 .property-details-pricing {
   margin: 1em 0; }
@@ -699,7 +701,9 @@ footer {
     margin-left: .5em; }
 
 .property-gallery-item {
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  overflow: hidden;
+  height: 14em; }
   .property-gallery-item a img {
     display: block;
     width: 100%; }
@@ -732,7 +736,30 @@ footer {
 #property-map {
   height: 20em; }
 
+@media only screen and (min-width: 30em) {
+  .property-gallery {
+    display: flex;
+    flex-wrap: wrap; }
+    .property-gallery-item {
+      flex: 0 0 46%;
+      height: 10em;
+      margin-right: .75em; } }
+
+@media only screen and (min-width: 40em) {
+  .property-gallery {
+    display: flex;
+    flex-wrap: wrap; }
+    .property-gallery-item {
+      flex: 0 0 48%;
+      height: 13em; } }
+
 @media only screen and (min-width: 60em) {
+  .property-gallery-item {
+    flex: 0 0 20%;
+    height: 8.5em; }
+  .property-wrapper {
+    max-width: 1400px;
+    margin: 2em auto; }
   .property-wrapper {
     display: flex;
     flex-wrap: wrap; }
@@ -749,31 +776,36 @@ footer {
     .property-wrapper .property-price-content {
       flex: 1 0 45%;
       padding: 1em; }
-    .property-wrapper .property-details-pricing {
-      margin-top: 0; }
-    .property-wrapper .floor-plan-link {
+    .property-wrapper .property-details {
       flex: 1 0 90%;
-      margin: 0 1em; }
-    .property-wrapper .epl-tab-wrapper {
-      flex: 1 0 90%;
-      margin: 0 1em; }
+      margin: 2em 1em; }
     .property-wrapper .property-gallery {
-      margin-left: .25em; }
-    .property-wrapper .property-video-and-map {
-      display: flex; }
-      .property-wrapper .property-video-and-map .property-video {
+      margin: 0 1em; }
+    .property-wrapper .property-buttons {
+      flex: 1 0 90%;
+      display: flex;
+      margin: 2em 1em; }
+    .property-wrapper .property-button {
+      margin: 0;
+      width: 15em;
+      height: 1.25em;
+      margin-right: 1em; }
+    .property-wrapper .property-agent-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1 0 90%;
+      margin: 0 1em; }
+      .property-wrapper .property-agent-wrapper h1 {
+        flex: 1 0 90%; }
+      .property-wrapper .property-agent-wrapper .property-agent {
         flex: 1 0 45%; }
-      .property-wrapper .property-video-and-map .property-map {
-        flex: 1 0 45%;
-        padding-left: 1em; }
-        .property-wrapper .property-video-and-map .property-map .epl-tab-section {
-          margin: 0; }
-        .property-wrapper .property-video-and-map .property-map #epl-default-map {
-          height: 100%; } }
+    .property-wrapper .property-map {
+      flex: 1 0 90%;
+      margin: 1em; } }
 
 @media only screen and (min-width: 80em) {
-  .property-wrapper {
-    margin: 2em 10em; } }
+  .property-gallery-item {
+    height: 11em; } }
 
 /* For displaying 3 columns on tablet */
 .gallery-columns-5 {

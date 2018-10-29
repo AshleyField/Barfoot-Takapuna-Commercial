@@ -1,5 +1,4 @@
 //Property Listings
-
 .epl-active-theme-barfootcustomtheme {
 	margin: 1em;
 }
@@ -18,6 +17,10 @@
 
 	h3 {
 		font-weight: 700;
+	}
+
+	.address-heading {
+		font-weight: 400;
 	}
 }
 
@@ -73,8 +76,11 @@
 
 .property-gallery-item {
 	margin-bottom: 1em;
+	overflow: hidden;
+	height: 14em;
 
 	a {
+
 		img {
 			display: block;
 			width: 100%;
@@ -123,8 +129,48 @@
 #property-map {
 	height: 20em;
 }
+@media only screen and (min-width: 30em) {
+
+	.property-gallery {
+		display: flex;
+		flex-wrap: wrap;
+
+		&-item {
+			flex: 0 0 46%;
+			height: 10em;
+			margin-right: .75em;
+		}
+	}
+}
+
+@media only screen and (min-width: 40em) {
+
+	.property-gallery {
+		display: flex;
+		flex-wrap: wrap;
+
+		&-item {
+			flex: 0 0 48%;
+			height: 13em;
+		}
+	}
+}
 
 @media only screen and (min-width: 60em) {
+
+	.property-gallery {
+
+		&-item {
+			flex: 0 0 20%;
+			height: 8.5em;
+		}
+	}
+
+	.property-wrapper {
+		max-width: 1400px;
+		margin: 2em auto;
+	}
+
 	.property-wrapper {
 		display: flex;
 		flex-wrap: wrap;
@@ -150,50 +196,56 @@
 			padding: 1em;
 		}
 
-		.property-details-pricing {
-			margin-top: 0;
-		}
-
-		.floor-plan-link {
+		.property-details {
 			flex: 1 0 90%;
-			margin: 0 1em;
-		}
-
-		.epl-tab-wrapper {
-			flex: 1 0 90%;
-			margin: 0 1em;
+			margin: 2em 1em;
 		}
 
 		.property-gallery {
-			margin-left: .25em;
+			margin: 0 1em;
 		}
 
-		.property-video-and-map {
+		.property-buttons {
+			flex: 1 0 90%;
 			display: flex;
+			margin: 2em 1em;
+		}
 
-			.property-video {
-				flex: 1 0 45%;
+		.property-button {
+			margin: 0;
+			width: 15em;
+			height: 1.25em;
+			margin-right: 1em;
+		}
+
+		.property-agent-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			flex: 1 0 90%;
+			margin: 0 1em;
+
+			h1 {
+				flex: 1 0 90%;
 			}
 
-			.property-map {
+			.property-agent {
 				flex: 1 0 45%;
-				padding-left: 1em;
-
-				.epl-tab-section {
-					margin: 0;
-
-				}
-
-				#epl-default-map {
-					height: 100%;
-				}
 			}
+		}
+
+		.property-map {
+			flex: 1 0 90%;
+			margin: 1em
 		}
 	}
 }
 
 @media only screen and (min-width: 80em) {
-	.property-wrapper {
-		margin: 2em 10em;
+
+	.property-gallery {
+
+		&-item {
+			height: 11em;
+		}
 	}
 }
