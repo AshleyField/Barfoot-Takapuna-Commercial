@@ -1,11 +1,23 @@
+<?php 
+
+$coordinates = get_field('coordinates');
+ ?>
+
 <div class="property-wrapper">
 		<div class="property-title">
 			<h2 class="entry-title"><?php the_title(); ?></h2>
 		</div>
 
-		<div class="property-subheading">
+		<div class="property-subheading property-address">
 			<h3 class="secondary-heading"><?php echo get_field('secondary_heading'); ?></h3>
+
+			<?php $address_show = get_field('display_address');
+
+			if($address_show == 'Yes'){ ?>
+			<h3 class="address-heading"><?php get_template_part('property', 'show-address'); ?></h3>
+			<?php } ?>
 		</div>
+
 
 		<div class="property-featured-image">
 			<img src="<?php the_field('main_image'); ?>">
@@ -21,7 +33,8 @@
 				foreach($terms as $term){
 
 					if($term->name == 'Sale'){
-						echo '<span>$'.get_field('price').'</span>';
+						// echo '<span>'.money_format('%(#10n', floatval(get_field('price'))).'</span>';
+						echo '<span>$'.number_format(get_field('price'), 2, '.', ',').'</span>';
 					}
 				  
 				}
@@ -36,76 +49,84 @@
 		</div>
 
 		<div class="property-gallery">
-			<?php get_template_part('property','gallery'); ?>
+			<?php 
+
+			$images = acf_photo_gallery('property_gallery', $post->ID);
+   			//Check if return array has anything in it
+    		if( count($images) ){
+    			get_template_part('property','gallery');
+    		} ?>
+			
 		</div>
 
 		<?php 
 		$floorplan = get_field('floorplan');
-		if($floorplan){?>
-		<div class="floor-plan-link">
-			<a href="<?php the_field('floorplan'); ?>"></a>
+		if($floorplan){ ?>
+		<div class="floor-plan-link property-button">
+			<a href="<?php the_field('floorplan'); ?>" target="_blank">Download Floor Plan</a>
+		</div>
+		<?php }; ?>
+
+		<?php 
+		$floorplan = get_field('barfoot_url');
+		if($floorplan){ ?>
+		<div class="barfoot-main-link property-button">
+			<a href="https://www.barfoot.co.nz/<?php the_field('property_id'); ?>" target="_blank">View on barfoot.co.nz</a>
 		</div>
 		<?php }; ?>
 		
-		<div class="epl-tab-wrapper tab-wrapper">
-			<div class="epl-tab-section epl-section-property-details">
-				<h5 class="epl-tab-title tab-title"><?php echo apply_filters('property_tab_title',__('Property Details', 'easy-property-listings' )); ?></h5>
-				<div class="epl-tab-content tab-content">
-					<div class="epl-property-address property-details">
-						<h3 class="epl-tab-address tab-address">
-							<?php do_action('epl_property_address'); ?>
-						</h3>
-						<?php do_action('epl_property_land_category'); ?>
-						<?php do_action('epl_property_price_content'); ?>
-						<?php do_action('epl_property_commercial_category'); ?>
-					</div>
-					<div class="epl-property-meta property-meta">
-						<?php do_action('epl_property_available_dates');// meant for rent only ?>
-						<?php do_action('epl_property_inspection_times'); ?>
-					</div>
-				</div>
-			</div>
-
-
-
-			<?php do_action('epl_property_tab_section_before'); ?>
-			<div class="epl-tab-section epl-tab-section-features">
-				<?php do_action('epl_property_tab_section'); ?>
-			</div>
-			<?php do_action('epl_property_tab_section_after'); ?>
-
-
-
-			<div class="property-video-and-map">
-				<!-- If there is a video output on page -->
+		
+		<div class="property-details">
+			<h1>Property Details</h1>
+			<div class="location property-details-row">
+				<h4>Location: </h4>
 				<?php 
-				global $property;
-				if($property->get_property_meta('property_video_url')): 
-
-				?>
-				<div class="property-video">
-					<?php do_action('epl_property_content_after');
-
-					?>
-				</div>
-				<?php endif ?>
-
-				<div class="property-map">
-					<?php do_action( 'epl_property_map' ); ?>
-				</div>
-
+				if($address_show == 'Yes'){ ?>
+					<p><?php get_template_part('property', 'show-address'); ?></p>
+					<?php }
+				 ?>
 			</div>
-
-			
-			
-			
-
-			<?php do_action( 'epl_single_extensions' ); ?>
-
-			<?php do_action( 'epl_single_before_author_box' ); ?>
-			<?php do_action( 'epl_single_author' ); ?>
-			<?php do_action( 'epl_single_after_author_box' ); ?>
+			<div class="car-parks property-details-row">
+				<h4>Car Parks: </h4><p><?php the_field('car_parks');?> Parks</p>
+			</div>
+			<div class="property-id property-details-row">
+				<h4>Property ID: </h4><p><?php the_field('property_id');?></p>
+			</div>
 		</div>
+
+		<div class="property-agent-wrapper">
+			<h1>Agent Details</h1>
+			<?php 
+
+			$posts = get_field('agent');
+
+			if( $posts ): ?>
+			    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+			        <?php setup_postdata($post); ?>
+			        <div class="property-agent">
+			        	<div class="property-agent-image">
+			        		<img src="<?php the_field('staff_image'); ?>" alt="">
+			        	</div>
+			        	<div class="property-agent-details">
+			        		<p class="agent-name"><?php the_title(); ?></p>
+			        		<p class="agent-phone"><?php the_field('staff_phone'); ?></p>
+							<a href="<?php the_field('staff_email'); ?>" class="agent-email"><?php the_field('staff_email'); ?></a>
+			        	</div>
+			        </div>
+			    <?php endforeach; ?>
+			    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+			<?php endif; ?>
+
+		</div>
+
+		<?php if($address_show == 'Yes'){ ?>
+
+		<div class="property-map" data-lat="<?php echo $coordinates['lat'] ?>" data-lng="<?php echo $coordinates['lng']?>" data-address="<?php get_template_part('property', 'show-address'); ?>">
+			<div class="property-map-inner" id="property-map"></div>
+		</div>
+
+		<?php } ?>
+
 	</div>
 
 	<div class="entry-footer epl-clearfix">

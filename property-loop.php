@@ -9,12 +9,16 @@
 		<div class="loop-sale-type">
 			<span><?php echo '$'.get_field('price'); ?></span>
 		</div>
-		<?php $address_show = get_field('display_address');
+		<div class="loop-address">
+			<span>
+				<?php $address_show = get_field('display_address');
 
-			if($address_show == 'Yes'){
-				get_template_part('property', 'show-address');
-			}
-		?>
+					if($address_show == 'Yes'){
+						get_template_part('property', 'show-address');
+					}
+				?>
+			</span>
+		</div>
 		<div class="loop-extras">
 			<div class="loop-extras-item">
 				<i class="fas fa-car"></i><p><?php echo get_field('car_parks');?> Parks</p>

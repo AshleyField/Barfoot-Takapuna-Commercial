@@ -652,25 +652,85 @@ footer {
 .epl-active-theme-barfootcustomtheme {
   margin: 1em; }
 
+.property-wrapper {
+  margin: 1em; }
+
 .property-title {
   margin: .5em 0; }
 
 .property-subheading {
   margin-bottom: .5em; }
   .property-subheading h3 {
-    font-weight: 400; }
+    font-weight: 700; }
 
 .property-details-pricing {
-  margin: .5em 0; }
-  .property-details-pricing .pricing {
-    float: left !important;
-    font-weight: 600; }
+  margin: 1em 0; }
+  .property-details-pricing span {
+    font-weight: 600;
+    font-size: 1.25em; }
 
 .property-featured-image {
   width: 100%; }
   .property-featured-image img {
     display: block;
     width: 100%; }
+
+.property-button {
+  display: block;
+  text-align: center;
+  margin: 2em 0; }
+  .property-button a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #28539c;
+    padding: 1em 0;
+    transition: .5s ease all; }
+    .property-button a:hover {
+      background-color: #3269c5; }
+
+.property-details-row {
+  display: flex;
+  margin-top: 1em; }
+  .property-details-row p {
+    margin: 0;
+    margin-left: .5em; }
+
+.property-gallery-item {
+  margin-bottom: 1em; }
+  .property-gallery-item a img {
+    display: block;
+    width: 100%; }
+
+.property-agent-wrapper {
+  margin: 1em 0; }
+  .property-agent-wrapper .property-agent {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em 0; }
+    .property-agent-wrapper .property-agent-image {
+      flex: 1 0 10%;
+      margin-right: 2em; }
+      .property-agent-wrapper .property-agent-image img {
+        width: 100%;
+        display: block; }
+    .property-agent-wrapper .property-agent-details {
+      flex: 1 0 50%; }
+      .property-agent-wrapper .property-agent-details .agent-name {
+        margin: 0;
+        font-weight: 700;
+        margin-bottom: 1em; }
+      .property-agent-wrapper .property-agent-details .agent-phone, .property-agent-wrapper .property-agent-details .agent-email {
+        font-weight: 200;
+        margin: 0; }
+
+.property-map {
+  margin: 2em 0; }
+
+#property-map {
+  height: 20em; }
 
 @media only screen and (min-width: 60em) {
   .property-wrapper {

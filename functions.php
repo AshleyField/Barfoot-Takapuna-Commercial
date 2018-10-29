@@ -4,10 +4,12 @@
 function barfootCustomFiles(){
 	wp_enqueue_script('barfootJavascript', get_theme_file_uri('/minified/scripts.min.js'), NULL, '1.0', true);
 	wp_enqueue_script('swiperJS', get_theme_file_uri('/minified/swiper.min.js'), NULL, '1.0', true);
+  wp_enqueue_script('lightboxJS', get_theme_file_uri('/minified/lightbox.min.js'), NULL, '1.0', true);
 	wp_enqueue_script('jQuery', '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
 	wp_enqueue_style('customGoogleFonts', 'https://fonts.googleapis.com/css?family=Montserrat:300,700,900|Roboto:300,400,500,700');
 	wp_enqueue_style('fontAwesome', 'https://use.fontawesome.com/releases/v5.4.1/css/all.css');
 	wp_enqueue_style('swiperStyles', get_theme_file_uri('/minified/swiper.min.css'));
+  wp_enqueue_style('lightboxStyles', get_theme_file_uri('/minified/lightbox.min.css'));
 	wp_enqueue_style('barfootMainStyles', get_stylesheet_uri());
 }
 
@@ -101,6 +103,16 @@ function create_properties() {
   );
 
   register_taxonomy('sale_type', 'properties', $arg);
+  
+  $arg = array(
+
+    'label' => 'Featured Property',
+    'rewrite' => array( 'slug' => 'featured-property' ),
+    'hierarchical' => true,
+    'show_admin_column' => true,
+  );
+
+  register_taxonomy('featured_property', 'properties', $arg);
 
 }
 add_action( 'init', 'create_properties' );

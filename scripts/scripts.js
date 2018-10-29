@@ -94,4 +94,24 @@ $(function(){
 
 	});
 
+	var center = {lat: $('.property-map').data('lat'),lng: $('.property-map').data('lng')};
+
+	var map = L.map('property-map', {scrollWheelZoom: false}).setView(center,17);
+
+	L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYXNoZXlmaWVsZCIsImEiOiJjamtrZXlvNnMwZTg3M3FwYzAxbGNqYTA4In0.AyMC7APOvh72_Q2evO5VTQ').addTo(map);
+
+	var marker = L.marker(center).addTo(map);
+
+	marker.bindPopup("<p>"+ $('.property-map').data('address') +"</p>").addTo(map);
+
+
+	map.on('click', function() {
+		if (map.scrollWheelZoom.enabled()) {
+			map.scrollWheelZoom.disable();
+		}
+
+		else {
+			map.scrollWheelZoom.enable();
+		}
+	});
 });
