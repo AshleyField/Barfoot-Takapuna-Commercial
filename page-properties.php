@@ -9,9 +9,7 @@
 	// The Query
 	$the_query = new WP_Query( $args );
 
-
-	$terms = get_terms('property_status',array('hide_empty'=>true));
-
+	echo $terms;
 	?>
 
 	<div class="listing-loop-wrapper">
@@ -23,6 +21,7 @@
 			while ( $the_query->have_posts() ) {
 				$the_query->the_post();
 
+				$terms = get_the_terms(get_the_ID(),'property_status');
 
 				foreach($terms as $term){
 

@@ -10,11 +10,13 @@
 
 		&-image {
 			width: 100%;
+			height: 17em;
+			overflow: hidden;
+			position: relative;
 
 			img {
 				display: block;
 				width: 100%;
-				height: 100%;
 			}
 		}
 
@@ -72,13 +74,43 @@
 	}
 }
 
+.property-image-sale {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: .5em 1.25em;
+
+	p {
+		margin: 0;
+		text-transform: uppercase;
+		color: #fff;
+		font-weight: 700;
+	}
+}
+
+.sale-type-for-sale {
+	background-color: $barfoot-blue;
+}
+
+.sale-type-lease {
+	background-color: $barfoot-red;
+}
+
+.sale-type-auction {
+	background-color: darken($barfoot-blue, 20%);
+}
+
 @media only screen and (min-width : 40em) {
 	.listing-loop-wrapper {
 		display: flex;
 		flex-wrap: wrap;
 
 		.listing-loop-item {
-			flex: 1 0 40%;
+			flex: 0 0 45%;
+
+			&-image {
+				max-height: 12em;
+			}
 		}
 	}
 
@@ -106,8 +138,16 @@
 		margin: 3em auto;
 
 		.listing-loop-item {
-			flex: 0 0 33%;
+			flex: 0 0 30%;
+
+			&-image {
+				max-height: 15em;
+			}
 		}
+	}
+
+	.homepage-loop {
+		margin: 1em auto;
 	}
 }
 
@@ -115,5 +155,9 @@
 	.listing-loop-wrapper {
 
 		margin: 4em auto;
+	}
+
+	.homepage-loop {
+		margin: 1em auto;
 	}
 }

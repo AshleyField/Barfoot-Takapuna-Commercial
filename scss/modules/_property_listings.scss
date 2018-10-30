@@ -96,8 +96,13 @@
 		margin: 1em 0;
 
 		&-image {
-			flex: 1 0 10%;
+			height: 7em;
+			width: 7em;
 			margin-right: 2em;
+			border-radius: 50%;
+			overflow: hidden;
+
+
 
 			img {
 				width: 100%;

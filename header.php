@@ -39,7 +39,7 @@
 				<ul class="navigation mobile-nav" data-nav="close">
 					<li><a href="/" class="<?php if($pagetitle == 'Home') echo 'active' ?>">Home</a></li>
 					<li><a href="/market-updates" class="<?php if($pagename == 'market-updates') echo 'active'; ?>">Market Updates</a></li>
-					<li><a href="/commercial" class="<?php if(strpos(get_permalink(), 'commercial') !== false){ echo 'active';} ?>">Current Listings</a></li>
+					<li><a href="/properties" class="<?php if($pagename == 'properties') echo 'active'; ?>">Current Listings</a></li>
 					<li class="dropdown">
 						<p class="dropbtn">About</a>
 						<i class="fas fa-sort-down dropbtn"></i>
@@ -61,7 +61,7 @@
 				<ul class="navigation desktop-nav" data-nav="close">
 					<li><a href="/" class="<?php if($pagetitle == 'Home') echo 'active' ?>">Home</a></li>
 					<li><a href="/market-updates" class="<?php if($pagename == 'market-updates') echo 'active'; ?>">Market Updates</a></li>
-					<li><a href="/commercial" class="<?php if(strpos(get_permalink(), 'commercial') !== false){ echo 'active';} ?>">Current Listings</a></li>
+					<li><a href="/properties" class="<?php if($pagename == 'properties') echo 'active'; ?>">Current Listings</a></li>
 					<li class="dropdown">
 						<p class="dropbtn">About</a>
 						<i class="fas fa-sort-down dropbtn"></i>

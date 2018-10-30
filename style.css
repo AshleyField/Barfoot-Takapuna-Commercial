@@ -360,8 +360,7 @@ nav {
       text-transform: uppercase;
       font-size: 2em;
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      letter-spacing: .1em; }
+      font-family: 'Montserrat', sans-serif; }
     .page-banner .page-banner-head .page-banner-subheading {
       margin-top: .25em; }
   .page-banner:before {
@@ -715,8 +714,11 @@ footer {
     flex-wrap: wrap;
     margin: 1em 0; }
     .property-agent-wrapper .property-agent-image {
-      flex: 1 0 10%;
-      margin-right: 2em; }
+      height: 7em;
+      width: 7em;
+      margin-right: 2em;
+      border-radius: 50%;
+      overflow: hidden; }
       .property-agent-wrapper .property-agent-image img {
         width: 100%;
         display: block; }
@@ -906,11 +908,13 @@ footer {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     background-color: rgba(0, 0, 0, 0.02); }
     .listing-loop-wrapper .listing-loop-item-image {
-      width: 100%; }
+      width: 100%;
+      height: 17em;
+      overflow: hidden;
+      position: relative; }
       .listing-loop-wrapper .listing-loop-item-image img {
         display: block;
-        width: 100%;
-        height: 100%; }
+        width: 100%; }
     .listing-loop-wrapper .listing-loop-item-content {
       padding: 1em; }
       .listing-loop-wrapper .listing-loop-item-content .loop-title {
@@ -947,12 +951,34 @@ footer {
     margin: 0;
     margin-left: .5em; }
 
+.property-image-sale {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .5em 1.25em; }
+  .property-image-sale p {
+    margin: 0;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700; }
+
+.sale-type-for-sale {
+  background-color: #28539c; }
+
+.sale-type-lease {
+  background-color: #e13300; }
+
+.sale-type-auction {
+  background-color: #13284b; }
+
 @media only screen and (min-width: 40em) {
   .listing-loop-wrapper {
     display: flex;
     flex-wrap: wrap; }
     .listing-loop-wrapper .listing-loop-item {
-      flex: 1 0 40%; }
+      flex: 0 0 45%; }
+      .listing-loop-wrapper .listing-loop-item-image {
+        max-height: 12em; }
   .listing-loop-wrapper .listing-loop-item .loop-button a {
     transition: .5s ease all; }
   .listing-loop-wrapper .listing-loop-item .loop-button a:hover {
@@ -962,11 +988,17 @@ footer {
   .listing-loop-wrapper {
     margin: 3em auto; }
     .listing-loop-wrapper .listing-loop-item {
-      flex: 0 0 33%; } }
+      flex: 0 0 30%; }
+      .listing-loop-wrapper .listing-loop-item-image {
+        max-height: 15em; }
+  .homepage-loop {
+    margin: 1em auto; } }
 
 @media only screen and (min-width: 80em) {
   .listing-loop-wrapper {
-    margin: 4em auto; } }
+    margin: 4em auto; }
+  .homepage-loop {
+    margin: 1em auto; } }
 
 h2 {
   font-size: 2em;

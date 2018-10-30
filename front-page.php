@@ -10,18 +10,55 @@
 		
 
 		<!-- Featured Properties -->
+		<div class="listing-loop-wrapper homepage-loop">
+			<?php 
 
-		<?php 
+				$args = array(
+					'post_type'=>'properties',
+					'posts_per_page'=>'6',
+				);
+				// The Query
+				$the_query = new WP_Query( $args );
 
-			global $flag;
 
-			$flag = 'homepage';
+				$terms = get_terms('featured_property',array('hide_empty'=>true));
 
-			echo do_shortcode('[listing featured=1 template="featuredGrid" ]'); 
+				?>
 
-			$flag = '';
+				<?php
 
-		?>
+				$counter = 0;
+
+
+				// The Loop
+				if ( $the_query->have_posts() ) {
+					query_posts('posts_per_page=6');
+					while ( $the_query->have_posts() ) {
+						$the_query->the_post();
+
+						foreach($terms as $term){
+
+							if($term->name == 'Featured'){
+								get_template_part('property','loop');
+							}
+						  
+						}
+					}
+					/* Restore original Post Data */
+					wp_reset_postdata();
+				}
+
+
+				// global $flag;
+
+				// $flag = 'homepage';
+
+				// echo do_shortcode('[listing featured=1 template="featuredGrid" ]'); 
+
+				// $flag = '';
+
+			?>
+		</div>
 
 		<!-- Testimonial Area -->
 

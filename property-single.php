@@ -25,21 +25,11 @@ $coordinates = get_field('coordinates');
 
 		<div class="property-price-content">
 			<div class="property-details-pricing">
-				<?php
+				<?php get_template_part('property', 'pricing');?>
+			</div>
 
-
-				$terms = get_terms('sale_type',array('hide_empty'=>true));
-
-				foreach($terms as $term){
-
-					if($term->name == 'Sale'){
-						// echo '<span>'.money_format('%(#10n', floatval(get_field('price'))).'</span>';
-						echo '<span>$'.number_format(get_field('price'), 2, '.', ',').'</span>';
-					}
-				  
-				}
-
-				?>
+			<div class="property-sale-type-extras">
+				<?php get_template_part('property','extras'); ?>
 			</div>
 
 			<div class="property-main-content">
@@ -48,16 +38,19 @@ $coordinates = get_field('coordinates');
 
 		</div>
 
-		<div class="property-gallery">
-			<?php 
-
+		<?php 
 			$images = acf_photo_gallery('property_gallery', $post->ID);
-   			//Check if return array has anything in it
-    		if( count($images) ){
-    			get_template_part('property','gallery');
-    		} ?>
-			
-		</div>
+   			
+
+    		if(count($images)) { ?>
+
+				<div class="property-gallery">
+				
+	    			<?php get_template_part('property','gallery'); ?>
+				
+				</div>
+
+			<?php } ?>
 
 		<div class="property-buttons">
 			<?php 
@@ -68,13 +61,9 @@ $coordinates = get_field('coordinates');
 				</div>
 				<?php }; ?>
 
-				<?php 
-				$floorplan = get_field('barfoot_url');
-				if($floorplan){ ?>
 				<div class="barfoot-main-link property-button">
 					<a href="https://www.barfoot.co.nz/<?php the_field('property_id'); ?>" target="_blank">View on barfoot.co.nz</a>
 				</div>
-				<?php }; ?>
 		</div>
 		
 		
@@ -94,6 +83,21 @@ $coordinates = get_field('coordinates');
 			<div class="property-id property-details-row">
 				<h4>Property ID: </h4><p><?php the_field('property_id');?></p>
 			</div>
+			<?php if(get_field('feature_1')){ ?>
+				<div class="property-id property-details-row">
+					<h4>Other Features: </h4><p><?php the_field('feature_1');?></p>
+				</div>
+			<?php } ?>
+			<?php if(get_field('feature_12')){ ?>
+				<div class="property-id property-details-row">
+					<h4>Other Features: </h4><p><?php the_field('feature_2');?></p>
+				</div>
+			<?php } ?>
+			<?php if(get_field('feature_3')){ ?>
+				<div class="property-id property-details-row">
+					<h4>Other Features: </h4><p><?php the_field('feature_3');?></p>
+				</div>
+			<?php } ?>
 		</div>
 
 		<div class="property-agent-wrapper">
