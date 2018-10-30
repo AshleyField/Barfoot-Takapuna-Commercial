@@ -6,8 +6,16 @@
 		margin: 1em;
 	}
 
+	.track-record-property {
+		box-shadow: 0 0 3px rgba(0,0,0,0.3);
+		background-color: rgba(0,0,0,.02);
+	}
+
 	.track-record-image {
 		position: relative;
+		height: 17em;
+		overflow: hidden;
+
 
 		img {
 			width: 100%;
@@ -65,10 +73,6 @@
 }
 
 @media only screen and (min-width : 43em) {
-	.track-record-property {
-			
-		box-shadow: 0 0 3px rgba(0,0,0,0.3);
-	}
 	.track-record-inner {
 		display: flex;
 		flex-wrap: wrap;

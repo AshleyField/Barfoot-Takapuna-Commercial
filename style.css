@@ -1449,8 +1449,13 @@ h2 {
   margin: 0 auto; }
   .track-record-wrapper .track-record-inner {
     margin: 1em; }
+  .track-record-wrapper .track-record-property {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.02); }
   .track-record-wrapper .track-record-image {
-    position: relative; }
+    position: relative;
+    height: 17em;
+    overflow: hidden; }
     .track-record-wrapper .track-record-image img {
       width: 100%;
       display: block; }
@@ -1487,8 +1492,6 @@ h2 {
     display: block; }
 
 @media only screen and (min-width: 43em) {
-  .track-record-property {
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); }
   .track-record-inner {
     display: flex;
     flex-wrap: wrap;
