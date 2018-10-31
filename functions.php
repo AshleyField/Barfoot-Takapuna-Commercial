@@ -134,25 +134,6 @@ function create_testimonials() {
 }
 add_action( 'init', 'create_testimonials' );
 
-function create_track_record() {
-
-  $arg = array(
-      'labels' => array(
-        'name' => __( 'Track Record' ),
-        'singular_name' => __( 'Track Record' ),
-        'menu_name' => __('Track Record')
-      ),
-      'public' => true,
-      'show_in_nav_menus' => true,
-      'menu_icon' => 'dashicons-awards'
-    );
-
-  register_post_type( 'trackrecord', $arg);
-}
-add_action( 'init', 'create_track_record' );
-
-
-
 // function modify_link_names ($array) {
 //   $array = array(
 //     'epl_button_label_mini_web' =>  __('Website ', 'easy-property-listings'))

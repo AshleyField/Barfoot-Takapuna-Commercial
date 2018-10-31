@@ -134,6 +134,14 @@
 #property-map {
 	height: 20em;
 }
+
+.archived-heading {
+	background-color: $barfoot-blue;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 1em;
+}
 @media only screen and (min-width: 30em) {
 
 	.property-gallery {

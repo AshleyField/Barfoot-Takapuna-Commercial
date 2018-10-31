@@ -738,6 +738,13 @@ footer {
 #property-map {
   height: 20em; }
 
+.archived-heading {
+  background-color: #28539c;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1em; }
+
 @media only screen and (min-width: 30em) {
   .property-gallery {
     display: flex;
@@ -955,7 +962,8 @@ footer {
   position: absolute;
   top: 0;
   right: 0;
-  padding: .5em 1.25em; }
+  padding: .5em 1.25em;
+  z-index: 10; }
   .property-image-sale p {
     margin: 0;
     text-transform: uppercase;
@@ -971,6 +979,26 @@ footer {
 .sale-type-auction {
   background-color: #13284b; }
 
+.gallery-outer-wrapper {
+  width: 100%; }
+  .gallery-outer-wrapper .swiper-slide {
+    width: 100% !important; }
+  .gallery-outer-wrapper .swiper-button-next {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%2328539C'%2F%3E%3C%2Fsvg%3E"); }
+  .gallery-outer-wrapper .swiper-button-prev {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%2328539C'%2F%3E%3C%2Fsvg%3E"); }
+
+.loop-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  opacity: .5; }
+
+.loop-pagination .swiper-pagination-bullet-active {
+  color: #fff;
+  background: #fff;
+  opacity: 1; }
+
 @media only screen and (min-width: 40em) {
   .listing-loop-wrapper {
     display: flex;
@@ -979,6 +1007,8 @@ footer {
       flex: 0 0 45%; }
       .listing-loop-wrapper .listing-loop-item-image {
         max-height: 12em; }
+  .gallery-outer-wrapper {
+    width: 100%; }
   .listing-loop-wrapper .listing-loop-item .loop-button a {
     transition: .5s ease all; }
   .listing-loop-wrapper .listing-loop-item .loop-button a:hover {
@@ -1114,7 +1144,7 @@ h2 {
 
 .blog-posts-home {
   margin: 1em auto;
-  padding-left: 1em;
+  padding: 1em;
   max-width: 1400px; }
 
 .blog-post-title {
@@ -1127,28 +1157,18 @@ h2 {
 
 .blog-subheading-home {
   font-weight: 400;
-  margin: 1em 0;
   margin-bottom: 2.5em; }
 
 .blog-post-individual-home {
-  display: flex;
   margin: 1em 0; }
   .blog-post-individual-home .blog-post-image-home {
-    flex: 0 0 25%;
-    height: 100%;
-    content: "";
+    width: 100%;
+    height: 13em;
     display: block;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    max-width: 14em;
-    max-height: 14em; }
-    .blog-post-individual-home .blog-post-image-home:after {
-      content: '';
-      display: block;
-      padding-bottom: 100%; }
-  .blog-post-individual-home .blog-post-individual-content-home {
-    margin-left: 1em; }
+    overflow: hidden; }
+    .blog-post-individual-home .blog-post-image-home img {
+      width: 100%;
+      display: block; }
   .blog-post-individual-home .blog-post-title {
     text-transform: uppercase;
     font-size: 1em;
@@ -1198,18 +1218,24 @@ h2 {
   margin-bottom: .25em; }
 
 @media only screen and (min-width: 40em) {
-  .blog-post-individual-home .blog-post-title {
-    font-size: 1.1em; } }
-
-@media only screen and (min-width: 60em) {
   .blog-inner-home {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; }
-    .blog-inner-home .blog-post-individual-home {
-      flex: 1 0 45%; }
-      .blog-inner-home .blog-post-individual-home:first-child {
-        margin-right: 2em; }
+    justify-content: space-between; }
+  .blog-post-individual-home {
+    flex: 0 0 30%; }
+    .blog-post-individual-home .blog-post-title {
+      font-size: 1.1em; }
+    .blog-post-individual-home .blog-post-image-home {
+      height: 7em; }
+  .view-all-posts {
+    flex: 1 0 90%;
+    text-transform: uppercase;
+    font-weight: 700; } }
+
+@media only screen and (min-width: 60em) {
+  .blog-inner-home .blog-post-individual-home .blog-post-image-home {
+    height: 15em; }
   .blog-posts-home {
     margin: 4em auto; }
   .view-all-posts {
@@ -1494,8 +1520,7 @@ h2 {
 @media only screen and (min-width: 43em) {
   .track-record-inner {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; }
+    flex-wrap: wrap; }
   .track-record-property {
     flex: 0 0 45%;
     margin: 1em; }

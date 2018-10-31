@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
-	<title><?php echo get_bloginfo( 'name' );?> - <?php the_title(); ?></title>
+	<?php 
+
+	// echo $url;
+	global $page_title_url;
+	 ?>
+	<title><?php echo get_bloginfo( 'name' );?> -
+		<?php if ($page_title_url) {
+    		echo 'Market Updates';
+		}
+		else {
+			the_title();
+		} ?></title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +38,7 @@
 		<div class="nav-wrap">
 			<nav>
 				<div class="logo">
-					<a href="index.html">
+					<a href="/">
 						<img src="<?php echo get_theme_file_uri('/assets/images/Barfoot-and-Thompson-Logo-Large.jpg') ?>" alt="">
 					</a>
 
@@ -80,12 +90,3 @@
 				</ul>
 			</nav>
 		</div>
-
-		<?php 
-		$url_prefix = get_bloginfo('url');
-		global $wp;  
-		$current_url = home_url(add_query_arg(array(),$wp->request));
-		if($current_url == $url_prefix.'/commercial'){
-			get_template_part('content', 'page-banner');
-		} 
-		?>

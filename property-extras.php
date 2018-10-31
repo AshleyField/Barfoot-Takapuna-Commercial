@@ -11,6 +11,11 @@
 			echo '<p>Auction Date: '. get_field('auction_date') .'</p>';
 			echo '<p>Auction Time: '. get_field('auction_time') .'</p>';
 		}
+
+		if($term->name == 'Deadline Private Treaty' || $term->name == 'Tender'){
+			echo '<p>Closing Date: '. get_field('closing_date') .'</p>';
+			echo '<p>Closing Time: '. get_field('closing_time') .'</p>';
+		}
 	  
 	}
 

@@ -27,7 +27,7 @@ foreach($terms as $term){
 			<?php } ?>
 		
 		<div class="track-record-description">
-			<?php the_content(); ?>
+			<p><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
 		</div>
 	</div>
 	

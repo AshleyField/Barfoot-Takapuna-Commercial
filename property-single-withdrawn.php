@@ -1,11 +1,10 @@
 <?php 
 
 $coordinates = get_field('coordinates');
-
-$property_name = get_the_title();
-
-$property_id = get_field('property_id');
  ?>
+
+
+<h1 class="archived-heading">This Property is no longer available</h1>
 
 <div class="property-wrapper">
 		<div class="property-title">
@@ -30,15 +29,6 @@ $property_id = get_field('property_id');
 		</div>
 
 		<div class="property-price-content">
-			<div class="property-details-pricing">
-				<?php get_template_part('property', 'pricing');?>
-			</div>
-
-			<div class="property-sale-type-extras">
-				<?php get_template_part('property','extras'); ?>
-				<hr>
-			</div>
-
 			<div class="property-main-content">
 				<?php the_content();?>
 			</div>
@@ -90,38 +80,18 @@ $property_id = get_field('property_id');
 			<div class="property-id property-details-row">
 				<h4>Property ID: </h4><p><?php the_field('property_id');?></p>
 			</div>
-			<?php 
-				if(get_field('land_area')){ ?>
-
-					<div class="property-details-row">
-						<h4>Land Area: </h4><p><?php the_field('land_area');?>m<sup>2</sup></p>
-					</div>
-
-			<?php } ?>
-			<div class="property-details-row">
-				<h4>Building Area: </h4><p><?php the_field('building_area');?>m<sup>2</sup></p>
-			</div>
-			<?php 
-				if(get_field('energy_rating')){ ?>
-
-					<div class="property-details-row">
-						<h4>Energy Rating: </h4><p><?php the_field('energy_rating');?></p>
-					</div>
-
-			<?php } ?>
-			
 			<?php if(get_field('feature_1')){ ?>
-				<div class="property-details-row">
+				<div class="property-id property-details-row">
 					<h4>Other Features: </h4><p><?php the_field('feature_1');?></p>
 				</div>
 			<?php } ?>
 			<?php if(get_field('feature_12')){ ?>
-				<div class="property-details-row">
+				<div class="property-id property-details-row">
 					<h4>Other Features: </h4><p><?php the_field('feature_2');?></p>
 				</div>
 			<?php } ?>
 			<?php if(get_field('feature_3')){ ?>
-				<div class="property-details-row">
+				<div class="property-id property-details-row">
 					<h4>Other Features: </h4><p><?php the_field('feature_3');?></p>
 				</div>
 			<?php } ?>
@@ -143,7 +113,7 @@ $property_id = get_field('property_id');
 			        	<div class="property-agent-details">
 			        		<p class="agent-name"><?php the_title(); ?></p>
 			        		<p class="agent-phone"><?php the_field('staff_phone'); ?></p>
-							<a href="mailto:<?php the_field('staff_email'); ?>?subject=Enquiry: <?php echo $property_name.' - Property ID: '. $property_id ; ?>" class="agent-email"><?php the_field('staff_email'); ?></a>
+							<a href="<?php the_field('staff_email'); ?>" class="agent-email"><?php the_field('staff_email'); ?></a>
 			        	</div>
 			        </div>
 			    <?php endforeach; ?>

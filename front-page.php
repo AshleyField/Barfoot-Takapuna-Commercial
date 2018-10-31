@@ -23,6 +23,8 @@
 
 				$terms = get_terms('featured_property',array('hide_empty'=>true));
 
+				// print_r($status_terms);
+
 				?>
 
 				<?php
@@ -38,24 +40,20 @@
 
 						foreach($terms as $term){
 
-							if($term->name == 'Featured'){
-								get_template_part('property','loop');
+							$status_terms = get_the_terms(get_the_ID(), 'property_status');
+							foreach($status_terms as $status_term){
+								if($term->name == 'Featured' && $status_term->name != 'Withdrawn'){
+									get_template_part('property','loop');
+								}
 							}
+
+							
 						  
 						}
 					}
 					/* Restore original Post Data */
 					wp_reset_postdata();
 				}
-
-
-				// global $flag;
-
-				// $flag = 'homepage';
-
-				// echo do_shortcode('[listing featured=1 template="featuredGrid" ]'); 
-
-				// $flag = '';
 
 			?>
 		</div>
@@ -90,14 +88,15 @@
 				<?php 
 
 				$homepagePosts = new WP_Query(array(
-				  'posts_per_page' => 2
+				  'posts_per_page' => 3
 				));
 
 				while ($homepagePosts->have_posts()){
 				  $homepagePosts->the_post(); ?>
 
 				 	<div class="blog-post-individual-home">
-				 		<div class="blog-post-image-home" style="background-image: url('<?php the_field('blog_main_image')?>');">
+				 		<div class="blog-post-image-home">
+				 			<img src="<?php the_field('blog_main_image')?>" alt="">
 				 		</div>
 				 		<div class="blog-post-individual-content-home">
 							<div class="blog-post-content">

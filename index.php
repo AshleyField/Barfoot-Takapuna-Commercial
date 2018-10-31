@@ -1,4 +1,6 @@
 <?php
+global $page_title_url;
+$page_title_url = 'Market Updates';
 get_header();
 
 $bannerimage_id = get_field('banner_image');

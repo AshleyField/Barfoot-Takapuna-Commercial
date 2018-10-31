@@ -94,6 +94,21 @@ $(function(){
 
 	});
 
+	var swiper = new Swiper('.main-image-container', {
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			dynamicBullets: true,
+		},
+		autoplay: false,
+	    speed: 900,
+
+	});
+
 	var center = {lat: $('.property-map').data('lat'),lng: $('.property-map').data('lng')};
 
 	var map = L.map('property-map', {scrollWheelZoom: false}).setView(center,17);

@@ -1,5 +1,4 @@
 <?php get_header();
-	$bannerimage_id = get_field('banner_image');
 
 	get_template_part('content', 'page-banner');
 

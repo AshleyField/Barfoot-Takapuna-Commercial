@@ -3,7 +3,7 @@
 	get_header();
 
 
-	get_template_part('content','standard-banner');
+	get_template_part('content', 'page-banner');
 
 	$args = array('post_type'=>'properties');
 	// The Query

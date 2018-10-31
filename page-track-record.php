@@ -1,6 +1,6 @@
 <?php get_header();
 
-	get_template_part('content','standard-banner'); ?>
+	get_template_part('content', 'page-banner'); ?>
 
 	<div class="track-record-wrapper">
 		<div class="track-record-inner">
