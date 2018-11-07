@@ -15,15 +15,17 @@
 
 				$args = array(
 					'post_type'=>'properties',
-					'posts_per_page'=>'6',
+					'tax_query'=> array(
+						array(
+							'taxonomy' => 'property_status',
+							'field'    => 'slug',
+							'terms'    => array( 'withdrawn'),
+							'operator' => 'NOT IN',
+						),
+					)
 				);
 				// The Query
 				$the_query = new WP_Query( $args );
-
-
-				$terms = get_terms('featured_property',array('hide_empty'=>true));
-
-				// print_r($status_terms);
 
 				?>
 
@@ -34,21 +36,21 @@
 
 				// The Loop
 				if ( $the_query->have_posts() ) {
-					query_posts('posts_per_page=6');
 					while ( $the_query->have_posts() ) {
 						$the_query->the_post();
 
-						foreach($terms as $term){
+						$terms = get_the_terms(get_the_ID(),'featured_property');
 
-							$status_terms = get_the_terms(get_the_ID(), 'property_status');
-							foreach($status_terms as $status_term){
-								if($term->name == 'Featured' && $status_term->name != 'Withdrawn'){
+						if(is_array($terms) || is_object($terms)){
+
+							foreach($terms as $term){
+
+								if($term->name == 'Featured' && $counter <= 5){
 									get_template_part('property','loop');
-								}
+									$counter++;
+								}						  
 							}
 
-							
-						  
 						}
 					}
 					/* Restore original Post Data */
@@ -69,7 +71,7 @@
 
 				<div class="mid-banner-content-text">
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nisi et dui dignissim aliquam. Integer finibus efficitur pellentesque. Aenean rhoncus efficitur leo, eget egestas enim porta in. In hac habitasse platea dictumst. Praesent congue enim vulputate, hendrerit sapien in, posuere nunc.
+						<?php the_field('homepage_quote'); ?>
 					</p>
 				</div>
 				
@@ -83,7 +85,7 @@
 		<!-- Blog Posts Loop -->
 		<div class="blog-posts-home">
 			<h2 class="blog-heading-home">Market Updates</h2>
-			<h3 class="blog-subheading-home">The market is constantly changing, we post on our blog regularly so you can keep up to date with the current trends.</h3>
+			<h3 class="blog-subheading-home"><?php the_field('market_updates_subheading'); ?></h3>
 			<div class="blog-inner-home">
 				<?php 
 
@@ -120,7 +122,7 @@
 				  <?php } wp_reset_postdata();
 
 				?>
-				<p class="view-all-posts"><a href="<?php echo site_url('/blog'); ?>">View All Blog Posts</a></p>
+				<p class="view-all-posts"><a href="<?php echo site_url('/market-updates'); ?>">View All Blog Posts</a></p>
 			</div>
 		</div>
 

@@ -7,7 +7,7 @@
 						<li class="footer-nav-item">
 							<a href="/market-updates" class="<?php if($pagename == 'market-updates') echo 'active'; ?>">Market Updates</a></li>
 						<li class="footer-nav-item">
-							<a href="/commercial" class="<?php if($pagename == 'Properties'){ echo 'active';} ?>">Current Listings</a></li>
+							<a href="/properties" class="<?php if($pagename == 'Properties'){ echo 'active';} ?>">Current Listings</a></li>
 						<li class="footer-nav-item">
 							<a href="/meet-the-team" class="<?php if($pagetitle == 'Meet The Team') echo 'active' ?>">Meet The Team</a>
 						</li>
@@ -32,7 +32,7 @@
 					<div class="footer-address">
 						<p>Cnr Lake Road &, Blomfield Spa, Takapuna, Auckland 0622</p>
 					</div>
-					<div class="footer-copy">© Copyright Barfoot & Thompson 2018 - <a href="www.precisionweb.co.nz">Website by Precision Web</a></div>
+					<div class="footer-copy">© Copyright Barfoot & Thompson 2018 - <a href="http://www.precisionweb.co.nz" target="_blank">Website by Precision Web</a></div>
 					<div class="footer-social">
 						<a href="https://www.facebook.com/Barfoot-Thompson-Commercial-275251036179815/" target="_blank"><i class="fab fa-facebook-f"></i></a>
 						<a href="https://www.linkedin.com/company/barfoot-thompson-commercial/" target="_blank"><i class="fab fa-linkedin-in"></i></a>

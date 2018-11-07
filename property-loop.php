@@ -79,9 +79,10 @@
 
 				<div class="loop-extras-item">
 					<i class="fas fa-info-circle"></i>
-				<?php echo '<p>'.get_field('feature_1').'</p>';
-			}?>
-			</div>
+					<?php echo '<p>'.get_field('feature_1').'</p>'; ?>
+				</div>
+
+			<?php } ?>
 		</div>
 
 		<div class="loop-button">

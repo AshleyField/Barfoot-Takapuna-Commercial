@@ -11,8 +11,8 @@
 
 			<div class="contact-contactform">
 				<h2>Contact Us</h2>
-				<p>If you have a question or would like to have a chat please fill out the form below or give us a call on 09 489 5084.</p>
-				<p class="contact-email">Alternativley send us an email at <a href="mailto:email">email@email.com</a></p>
+				<p><?php the_field('contact_main_text'); ?></p>
+				<p class="contact-email">Alternativley send us an email at <a href="mailto:<?php the_field('contact_email'); ?>"><?php the_field('contact_email'); ?></a></p>
 
 				<?php echo do_shortcode('[contact-form-7 id="103" title="Barfoot Contact 2"]')?>
 			</div>
